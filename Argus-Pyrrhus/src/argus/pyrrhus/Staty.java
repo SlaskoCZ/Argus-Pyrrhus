@@ -9,13 +9,25 @@ import static argus.pyrrhus.ArgusPyrrhus.STR;
 import static argus.pyrrhus.ArgusPyrrhus.INT;
 import static argus.pyrrhus.ArgusPyrrhus.DEX;
 import static argus.pyrrhus.ArgusPyrrhus.VIT;
+import static argus.pyrrhus.ArgusPyrrhus.EXP;
+import static argus.pyrrhus.ArgusPyrrhus.LVL;
+import static argus.pyrrhus.ArgusPyrrhus.obtiznost;
 import java.util.Scanner;
 /**
  *
  * @author Karel
  */
 public class Staty {
-    
+    void exp(){
+        int expgain = 5;
+       ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));
+       int lvlup;
+       lvlup = 100 + ArgusPyrrhus.LVL*expgain;
+        if (lvlup<ArgusPyrrhus.EXP) {
+            ArgusPyrrhus.LVL=ArgusPyrrhus.LVL+1;
+            ArgusPyrrhus.EXP = 0;
+        }
+    }
     void hit(){
     //zdraví
     
