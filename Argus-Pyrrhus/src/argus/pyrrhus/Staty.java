@@ -23,7 +23,7 @@ public class Staty {
     float sance = ((float)ArgusPyrrhus.DEX * (0.5f));
     int critical;
     int random= (int)(1 + 100* Math.random());
-       if ((100-sance) > random) {
+       if ((100-sance) < random) {
            critical=2;
             
         } else {
@@ -31,7 +31,7 @@ public class Staty {
         }
     //síla utoku
     int odchylka = (int)(1.1 - 0.2* Math.random());
-    ArgusPyrrhus.hit =(int) (ArgusPyrrhus.STR * odchylka * critical);
+    ArgusPyrrhus.hit = Math.round((float)(Math.random()*ArgusPyrrhus.STR * odchylka * critical));
     
 
    
@@ -41,13 +41,13 @@ public class Staty {
         int enemyCritical;
         float enemySance = ((float)Enemy.enemyDEX * (0.5f));
        int enemyRandom= (int)(1 + 100* Math.random());
-       if ((100-enemySance) > enemyRandom) {
+       if ((100-enemySance) < enemyRandom) {
            enemyCritical=2;
             
         } else {
            enemyCritical=1;
         }
     int odchylka = (int)(1.1 - 0.2* Math.random());
-    Enemy.enemyHit =(int) (Enemy.enemySTR * odchylka * enemyCritical);   
+    Enemy.enemyHit = Math.round((float)(Math.random()*Enemy.enemySTR * odchylka * enemyCritical));   
     }
 }
