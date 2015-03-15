@@ -19,13 +19,27 @@ import java.util.Scanner;
  */
 public class Staty {
     void exp(){
-        int expgain = 5;
+        int expgain = 20;
        ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.EXP+ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));
        int lvlup;
        lvlup = 100 + ArgusPyrrhus.LVL*expgain;
         if (lvlup<ArgusPyrrhus.EXP) {
             ArgusPyrrhus.LVL=ArgusPyrrhus.LVL+1;
             ArgusPyrrhus.EXP = 0;
+            System.out.println("Vyberte si vas atribut : STR,DEX,VIT)");
+               System.out.print("Zadej obtiznost: ");
+               
+                  switch(Vstup.vstup){
+                   case "STR":
+                      ArgusPyrrhus.STR =ArgusPyrrhus.STR+1;
+                       break;
+                   case "DEX":
+                       ArgusPyrrhus.DEX=ArgusPyrrhus.DEX+1;
+                       break;
+                   case "VIT":
+                       ArgusPyrrhus.VIT=ArgusPyrrhus.VIT+1;
+                      
+               }
         }
     }
     void hit(){
