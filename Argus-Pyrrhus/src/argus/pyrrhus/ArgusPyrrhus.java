@@ -73,9 +73,9 @@ public class ArgusPyrrhus {
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
             System.in.read();
-            while (true){
-                mapa.rozcesti();
-            }
+            //while (true){
+            //    mapa.rozcesti();
+            //}
             while (true){
             enemy.getEnemy();  
             souboj.Boj();
