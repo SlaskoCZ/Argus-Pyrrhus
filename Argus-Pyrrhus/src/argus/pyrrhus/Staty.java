@@ -46,7 +46,7 @@ public class Staty {
         } else {
            enemyCritical=1;
         }
-    int odchylka = (int)(1.1 - 0.2* Math.random());
+ 
     Enemy.enemyHit = Math.round((float)(Math.random()*Enemy.enemySTR * (1.1 - 0.2* Math.random()) * enemyCritical));   
     }
 }
