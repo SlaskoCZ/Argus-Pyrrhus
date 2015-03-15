@@ -7,7 +7,6 @@ package argus.pyrrhus;
 
 
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  *
