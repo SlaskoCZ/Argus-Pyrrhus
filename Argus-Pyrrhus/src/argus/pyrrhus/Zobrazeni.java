@@ -11,9 +11,10 @@ package argus.pyrrhus;
  */
  
 public class Zobrazeni {
+    Staty staty = new Staty();
     void Hrdina(){
         System.out.println("Jmeno: "+ArgusPyrrhus.name);
-        System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP);
+        System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP+"/"+staty.lvlup);
         System.out.print("Sila: "+ArgusPyrrhus.STR+"   ");
         System.out.println("Obratnost: "+ArgusPyrrhus.DEX+"   ");
         System.out.print("Inteligence: "+ArgusPyrrhus.INT+"   ");

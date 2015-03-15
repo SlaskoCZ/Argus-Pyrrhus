@@ -73,6 +73,7 @@ public class ArgusPyrrhus {
             while (true){
             enemy.getEnemy();  
             souboj.Boj();
+            zobrazeni.Hrdina();
             System.out.println("Dalsi souboj? Zmackni enter");
             System.in.read();
             }
