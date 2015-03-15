@@ -38,8 +38,8 @@ public class ArgusPyrrhus {
            
             i++;
                 System.out.println("Zobrazeni: "+i);
-                 Thread.sleep(10000);
-                 //test nebot test
+                 Thread.sleep(100000);
+                 
             }
        
                 
