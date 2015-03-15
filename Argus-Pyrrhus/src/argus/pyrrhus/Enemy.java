@@ -30,6 +30,20 @@ public class Enemy {
             case 1:
                 System.out.println("Narazil jsi na banditu! Jeho level je: "+enemyLVL);
                 bandita();
+                break;
+            case 2:
+                System.out.println("Narazil jsi na Trpaslika! Jeho level je: "+enemyLVL);
+                trpaslik();
+                break;
+            case 3:
+                System.out.println("Narazil jsi na vlka! Jeho level je: "+enemyLVL);
+                vlk();
+                break;
+            case 4:
+                System.out.println("Narazil jsi na strom veku! Jeho level je: "+enemyLVL);
+                stromVeku();
+                break;
+                
         }
     }
     void bandita(){
@@ -38,6 +52,33 @@ public class Enemy {
         enemyDEX =(int)Math.round(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
         enemyVIT =(int)Math.round(enemyLVL-1+3*ArgusPyrrhus.obtiznost);
         enemyZdravi = (5*enemyVIT);
+                
+        
+    }
+    void trpaslik(){
+        enemyName = "Trpaslik";
+        enemySTR =(int)Math.round(enemyLVL-1+2*ArgusPyrrhus.obtiznost);
+        enemyDEX =(int)Math.round(enemyLVL-1+1*ArgusPyrrhus.obtiznost);
+        enemyVIT =(int)Math.round(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemyZdravi = (10*enemyVIT);
+                
+        
+    }
+    void vlk(){
+        enemyName = "Vlk";
+        enemySTR =(int)Math.round(enemyLVL-1+7*ArgusPyrrhus.obtiznost);
+        enemyDEX =(int)Math.round(enemyLVL-1+1*ArgusPyrrhus.obtiznost);
+        enemyVIT =(int)Math.round(enemyLVL-1+8*ArgusPyrrhus.obtiznost);
+        enemyZdravi = (3*enemyVIT);
+                
+        
+    }
+    void stromVeku(){
+        enemyName = "Strom Veku";
+        enemySTR =(int)Math.round(enemyLVL-1+1*ArgusPyrrhus.obtiznost);
+        enemyDEX =(int)Math.round(enemyLVL-1+0*ArgusPyrrhus.obtiznost);
+        enemyVIT =(int)Math.round(enemyLVL-1+80*ArgusPyrrhus.obtiznost);
+        enemyZdravi = (20*enemyVIT);
                 
         
     }
