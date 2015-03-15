@@ -12,7 +12,7 @@ package argus.pyrrhus;
  
 public class Zobrazeni {
     void JmenoHrdiny(){
-        System.out.print("Jmeno: "+ArgusPyrrhus.name);
+        System.out.println("Jmeno: "+ArgusPyrrhus.name);
         System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP);
         System.out.print("Sila: "+ArgusPyrrhus.STR+"   ");
         System.out.println("Obratnost: "+ArgusPyrrhus.DEX+"   ");
