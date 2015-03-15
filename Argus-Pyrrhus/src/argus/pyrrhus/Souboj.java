@@ -22,13 +22,13 @@ void Boj(){
     while (Enemy.enemyZdravi >0 && ArgusPyrrhus.zdravi >0){
         staty.hit();
         staty.enemyHit();
-        System.out.println(Enemy.enemyName+" ti ubral "+Enemy.enemyHit+" bodu zdravi");
+        System.out.println(Enemy.enemyName+" te zasahl za "+Enemy.enemyHit+" bodu zdravi   tve zbyvajici zdravi je "+ArgusPyrrhus.zdravi);
         ArgusPyrrhus.zdravi = (ArgusPyrrhus.zdravi-Enemy.enemyHit);
-        System.out.println("Ubral si "+Enemy.enemyName+" "+ArgusPyrrhus.hit+" bodu zdravi");
+        System.out.println("Zasahl jsi "+Enemy.enemyName+" za "+ArgusPyrrhus.hit+" bodu zdravi  zbyva mu "+Enemy.enemyZdravi +" bodu zdravi");
         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
     }
     if (Enemy.enemyZdravi>0){
-        System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi+" bodu zdravi.");
+        System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi+" bodu zdravi" );
     } 
     else
         System.out.println(Enemy.enemyName+" vubec netusil co se stalo");
