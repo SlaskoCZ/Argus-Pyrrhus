@@ -19,6 +19,7 @@ public class ArgusPyrrhus {
            public static int DEX;
            public static int VIT;
            public static int LVL;
+           public static int EXP;
 
     /**
      * @param args the command line arguments
