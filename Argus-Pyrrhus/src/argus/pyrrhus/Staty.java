@@ -16,20 +16,25 @@ import java.util.Scanner;
  */
 public class Staty {
     public static int zdravi;
-    public static boolean crit;
+    public static int critical;
     public static float sance;
     void name(){
     //zdraví
     zdravi=VIT*5;
     //critical sance
     sance = ((float)ArgusPyrrhus.DEX * (0.5f));
-    
+    int critical;
     int random= (int)(1 + 100* Math.random());
        if ((100-sance) > random) {
+           critical=2;
             
         } else {
+           critical=1;
         }
-  
+    //síla utoku
+       int odchylka = (int)(1.1 - 0.2* Math.random());
+    int ATK =(int) (ArgusPyrrhus.STR * odchylka * critical);
+    
 
    
     
