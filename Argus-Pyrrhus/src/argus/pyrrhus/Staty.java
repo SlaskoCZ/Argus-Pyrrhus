@@ -21,23 +21,24 @@ public class Staty {
     public static int lvlup;
     void exp(){
         int expgain = 20;
+        Vstup vstup = new Vstup();
        ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.EXP+ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));     
        lvlup = 100 + ArgusPyrrhus.LVL*expgain;
         if (lvlup<ArgusPyrrhus.EXP) {
             ArgusPyrrhus.LVL=ArgusPyrrhus.LVL+1;
             ArgusPyrrhus.EXP = 0;
             System.out.println("Vyberte si vas atribut : STR,DEX,VIT)");
-               System.out.print("Zadej obtiznost: ");
-               
+               System.out.print("Zadej atribut: ");
+               vstup.vstup();
                   switch(Vstup.vstup){
                    case "STR":
-                      ArgusPyrrhus.STR =ArgusPyrrhus.STR+1;
+                      ArgusPyrrhus.STR++;
                        break;
                    case "DEX":
-                       ArgusPyrrhus.DEX=ArgusPyrrhus.DEX+1;
+                       ArgusPyrrhus.DEX++;
                        break;
                    case "VIT":
-                       ArgusPyrrhus.VIT=ArgusPyrrhus.VIT+1;
+                       ArgusPyrrhus.VIT++;
                       
                }
         }
