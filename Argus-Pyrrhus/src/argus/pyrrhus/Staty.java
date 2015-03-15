@@ -15,12 +15,15 @@ import java.util.Scanner;
  * @author Karel
  */
 public class Staty {
+    public static int zdravi;
+    public static boolean crit;
+    public static float sance;
     void name(){
     //zdraví
-    int zdraví=VIT*5;
+    zdravi=VIT*5;
     //critical sance
-    int sance = (ArgusPyrrhus.DEX * (0,5));
-    int crit;
+    sance = ((float)ArgusPyrrhus.DEX * (0.5f));
+    
     int random= (int)(1 + 100* Math.random());
        if ((100-sance) > random) {
             
