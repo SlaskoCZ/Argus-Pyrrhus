@@ -23,8 +23,7 @@ public class ArgusPyrrhus {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner user_input;
-               user_input = new Scanner(System.in);
+        Vstup vstup = new Vstup();
         Zobrazeni zobrazeni;
                zobrazeni = new Zobrazeni();
         
@@ -36,8 +35,7 @@ public class ArgusPyrrhus {
                VIT=10;
               
         //Jmeno
-            System.out.println("Zadej jmmeno hrdiny!");
-            name = user_input.next();
+               vstup.name();
             
         // Vypis do konzole
             
