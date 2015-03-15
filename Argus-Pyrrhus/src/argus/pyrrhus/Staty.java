@@ -23,9 +23,11 @@ public class Staty {
     Enemy enemy = new Enemy();
     //penizky a jeho vzorecky
     public static int moneygive;
-    void MONEY(){
-        moneygive=(int)(Enemy.enemyDEX+Enemy.enemySTR+Enemy.enemyVIT)/(ArgusPyrrhus.LVL-Enemy.enemyLVL);
-    ArgusPyrrhus.money=(int)moneygive+ArgusPyrrhus.money;   
+    void MONEY(){if (ArgusPyrrhus.LVL==Enemy.enemyLVL) {
+          moneygive=(int)((Enemy.enemyDEX+Enemy.enemySTR+Enemy.enemyVIT)/(1+ArgusPyrrhus.LVL-Enemy.enemyLVL));  
+        }else{
+        moneygive=(int)((Enemy.enemyDEX+Enemy.enemySTR+Enemy.enemyVIT)/(1+ArgusPyrrhus.LVL-Enemy.enemyLVL));}
+    ArgusPyrrhus.money=moneygive+ArgusPyrrhus.money;  
     
     }
     public static int lvlup;
