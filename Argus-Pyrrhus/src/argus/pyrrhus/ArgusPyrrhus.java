@@ -22,6 +22,7 @@ public class ArgusPyrrhus {
            public static int EXP;
            public static int zdravi;
            public static int hit;
+           public static int money;
            public static double obtiznost;
     /**
      * @param args the command line arguments

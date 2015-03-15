@@ -19,6 +19,7 @@ public class Zobrazeni {
         System.out.println("Obratnost: "+ArgusPyrrhus.DEX+"   ");
         System.out.print("Inteligence: "+ArgusPyrrhus.INT+"   ");
         System.out.println("Vitalita: "+ArgusPyrrhus.VIT+"   ");
+         System.out.println("Stribrny: "+ArgusPyrrhus.money+"   ");
         
     }
     void Enemy(){

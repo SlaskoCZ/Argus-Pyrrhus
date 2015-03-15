@@ -12,12 +12,22 @@ import static argus.pyrrhus.ArgusPyrrhus.VIT;
 import static argus.pyrrhus.ArgusPyrrhus.EXP;
 import static argus.pyrrhus.ArgusPyrrhus.LVL;
 import static argus.pyrrhus.ArgusPyrrhus.obtiznost;
+import static argus.pyrrhus.ArgusPyrrhus.money;
 import java.util.Scanner;
+  
 /**
  *
  * @author Karel
  */
 public class Staty {
+    Enemy enemy = new Enemy();
+    //penizky a jeho vzorecky
+    public static int moneygive;
+    void MONEY(){
+        moneygive=(int)(Enemy.enemyDEX+Enemy.enemySTR+Enemy.enemyVIT)/(ArgusPyrrhus.LVL-Enemy.enemyLVL);
+    ArgusPyrrhus.money=(int)moneygive+ArgusPyrrhus.money;   
+    
+    }
     public static int lvlup;
     void exp(){
         int expgain = 20;

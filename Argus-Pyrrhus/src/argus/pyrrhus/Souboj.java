@@ -33,6 +33,7 @@ void Boj(){
     else{
         System.out.println(Enemy.enemyName+" vubec netusil co se stalo");
     staty.exp();
+    staty.MONEY();
         System.out.println(""); 
         
     }
