@@ -16,10 +16,12 @@ public class Zobrazeni {
         System.out.println("Jmeno: "+ArgusPyrrhus.name);
         System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP+"/"+staty.lvlup);
         System.out.print("Sila: "+ArgusPyrrhus.STR+"   ");
-        System.out.println("Obratnost: "+ArgusPyrrhus.DEX+"   ");
+        System.out.print("Obratnost: "+ArgusPyrrhus.DEX+"   ");
+        System.out.println("Zdravi: "+ArgusPyrrhus.zdravi+"   ");
         System.out.print("Inteligence: "+ArgusPyrrhus.INT+"   ");
         System.out.println("Vitalita: "+ArgusPyrrhus.VIT+"   ");
-         System.out.println("Stribrny: "+ArgusPyrrhus.money+"   ");
+        System.out.println("Stribrny: "+ArgusPyrrhus.money+"   ");
+        
         
     }
     void Enemy(){
