@@ -12,9 +12,15 @@ package argus.pyrrhus;
 public class Utilities {
 void clearConsole()
 {
-    System.out.print("\n\n\n\n\n");
-        }
+    int i=1;
+    while(i<10){
+        i++;
+        System.out.print("\n");
+                
+    }
+
+}
    
-        //  Handle any exceptions.
+        
     
 }
