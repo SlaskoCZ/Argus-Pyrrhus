@@ -52,7 +52,9 @@ public class Staty {
                    case "VIT":
                        ArgusPyrrhus.VIT++;
                       
+                      
                }
+                  ArgusPyrrhus.zdravi=(5*ArgusPyrrhus.VIT)
         }
     }
     void hit(){
