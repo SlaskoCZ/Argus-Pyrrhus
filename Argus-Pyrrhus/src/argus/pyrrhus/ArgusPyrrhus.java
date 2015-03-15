@@ -44,6 +44,8 @@ public class ArgusPyrrhus {
         //Jmeno
                vstup.name();
         //Obtiznost
+               System.out.println("Obtiznost (Easy,Normal,Hard,Impossible)");
+               System.out.print("Zadej obtiznost: ");
                vstup.vstup();
                switch(Vstup.vstup){
                    case "Easy":
