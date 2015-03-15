@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author Slasko
  */
 public class ArgusPyrrhus {
-           public static int name;
+           public static String name;
            public static int STR;
            public static int INT;
            public static int DEX;
@@ -32,10 +32,10 @@ public class ArgusPyrrhus {
                console = System.console();
                int i=0;
         //Staty
-               int STR=10;
-               int DEX=10;
-               int INT=10;
-               int VIT=10;
+               STR=10;
+               DEX=10;
+               INT=10;
+               VIT=10;
               
         //Jmeno
             System.out.println("Zadej jmmeno hrdiny!");
