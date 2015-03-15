@@ -16,7 +16,7 @@ void clearConsole()
     while(i<10){
         i++;
         System.out.print("\n");
-                
+
     }
 
 }
