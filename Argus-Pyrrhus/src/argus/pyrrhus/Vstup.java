@@ -6,6 +6,10 @@
 package argus.pyrrhus;
 
 
+import static argus.pyrrhus.ArgusPyrrhus.DEX;
+import static argus.pyrrhus.ArgusPyrrhus.INT;
+import static argus.pyrrhus.ArgusPyrrhus.STR;
+import static argus.pyrrhus.ArgusPyrrhus.VIT;
 import static argus.pyrrhus.ArgusPyrrhus.name;
 import java.util.Scanner;
 
@@ -19,9 +23,15 @@ public class Vstup {
     Scanner user_input;
        user_input = new Scanner(System.in);
        //Jmeno
-            System.out.println("Zadej jmmeno hrdiny!");
-            name = user_input.next();
+        System.out.println("Zadej jmmeno hrdiny!");
+        name = user_input.next();
             
                
 }
+    void stats(){
+        STR=10;
+        DEX=10;
+        INT=10;
+        VIT=10;
+    }
 }
