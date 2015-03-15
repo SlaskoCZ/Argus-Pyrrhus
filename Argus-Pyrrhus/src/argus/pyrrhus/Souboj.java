@@ -30,8 +30,13 @@ void Boj(){
     if (Enemy.enemyZdravi>0){
         System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi +" bodu zdravi" );
     } 
-    else
+    else{
         System.out.println(Enemy.enemyName+" vubec netusil co se stalo");
+    staty.exp();
+        System.out.println("Tvuj aktualni lvl je "+ArgusPyrrhus.LVL+" a tve aktualni zkusenosti jsou "+ArgusPyrrhus.exp );
+    
+    }
+    
 }
 
 }
