@@ -77,7 +77,7 @@ public class ArgusPyrrhus {
             //while (true){
             //    mapa.rozcesti();
             //}
-            while (true){
+            while (zdravi>0){
             enemy.getEnemy();  
             souboj.Boj();
             zobrazeni.Hrdina();
