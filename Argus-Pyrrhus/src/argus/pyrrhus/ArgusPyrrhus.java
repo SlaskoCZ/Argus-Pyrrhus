@@ -40,12 +40,12 @@ public class ArgusPyrrhus {
             name = user_input.next();
             
         // Vypis do konzole
-            while (true){
+            
             zobrazeni.JmenoHrdiny();
            
 
                  
-            }
+            
        
                 
     }
