@@ -5,7 +5,7 @@
  */
 package argus.pyrrhus;
 
-import java.io.Console;
+
 import java.util.Scanner;
 
 /**
@@ -21,15 +21,13 @@ public class ArgusPyrrhus {
 
     /**
      * @param args the command line arguments
-     * @throws java.lang.InterruptedException
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner user_input;
                user_input = new Scanner(System.in);
         Zobrazeni zobrazeni;
                zobrazeni = new Zobrazeni();
-        Console console;
-               console = System.console();
+        
                int i=0;
         //Staty
                STR=10;
@@ -45,9 +43,7 @@ public class ArgusPyrrhus {
             while (true){
             zobrazeni.JmenoHrdiny();
            
-            i++;
-                System.out.println("Zobrazeni: "+i);
-                 Thread.sleep(10000);
+
                  
             }
        
