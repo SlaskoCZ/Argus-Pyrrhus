@@ -10,7 +10,8 @@ package argus.pyrrhus;
  * @author Slasko
  */
 public class Mapa {
-    public static int[][][] mapa = new int[25][25][2];
+    public static int[][][] mapa = new int[25][25][3];
+    public static String[][] heroMap= new String [25][25];
     void rozcesti(){
         int x = Integer.valueOf(Vstup.vstup);
         switch (x){
@@ -29,32 +30,23 @@ public class Mapa {
     }
     void mapgen(){
         
-        for (int i=0; i<mapa.length; i++){
-            for (int j=0;j<mapa[i].length; j++){
-                  mapa[i][j][0]=(int)(Math.random()*5+1);
-                  
-                    
-                    
-                    
-                    
-                  
+        for (int i=0;i<mapa.length;i++) {
+            for (int j=0;j<mapa[i].length;j++) {
+                mapa[i][j][0] = (int)(Math.random()*5+1);
+                mapa[i][j][1] = (int)(Math.random()*5+1);
+                heroMap[i][j]="0";
             }
         }
         
     }
     void mapVision(){
-        
-        for (int i=0; i<mapa.length; i++){
-            System.out.println("");
-            for (int j=0;j<mapa[i].length; j++){
-                    System.out.print("["+mapa[i][j][0]+"]");
-                  
-                    
-                    
-                    
-                    
-                }
-            
+        for (int i=0;i<25;i++) {
+            System.out.println("test");
+            for (int j=0;j<25;j++) {
+                System.out.print("[" + heroMap[i][j] + "]");
+
+                
+            }
         }
         
     }
