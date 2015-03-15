@@ -30,8 +30,7 @@ public class Staty {
            critical=1;
         }
     //síla utoku
-    int odchylka = (int)(1.1 - 0.2* Math.random());
-    ArgusPyrrhus.hit = Math.round((float)(Math.random()*ArgusPyrrhus.STR * odchylka * critical));
+   ArgusPyrrhus.hit = Math.round((float)(Math.random()*ArgusPyrrhus.STR * (1.1 - 0.2* Math.random()) * critical));
     
 
    
@@ -48,6 +47,6 @@ public class Staty {
            enemyCritical=1;
         }
     int odchylka = (int)(1.1 - 0.2* Math.random());
-    Enemy.enemyHit = Math.round((float)(Math.random()*Enemy.enemySTR * odchylka * enemyCritical));   
+    Enemy.enemyHit = Math.round((float)(Math.random()*Enemy.enemySTR * (1.1 - 0.2* Math.random()) * enemyCritical));   
     }
 }
