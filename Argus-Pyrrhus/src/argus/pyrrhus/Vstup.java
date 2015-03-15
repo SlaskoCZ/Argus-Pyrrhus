@@ -37,5 +37,6 @@ public class Vstup {
         VIT=10;
         LVL=1;
         EXP=0;
+        ArgusPyrrhus.zdravi=VIT*5;
     }
 }

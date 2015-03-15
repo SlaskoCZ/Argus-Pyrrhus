@@ -15,11 +15,10 @@ import java.util.Scanner;
  * @author Karel
  */
 public class Staty {
-    public static int zdravi;
-    public static int hit;
-    void name(){
+    
+    void hit(){
     //zdraví
-    zdravi=VIT*5;
+    
     //critical sance
     float sance = ((float)ArgusPyrrhus.DEX * (0.5f));
     int critical;
@@ -32,7 +31,7 @@ public class Staty {
         }
     //síla utoku
     int odchylka = (int)(1.1 - 0.2* Math.random());
-    hit =(int) (ArgusPyrrhus.STR * odchylka * critical);
+    ArgusPyrrhus.hit =(int) (ArgusPyrrhus.STR * odchylka * critical);
     
 
    

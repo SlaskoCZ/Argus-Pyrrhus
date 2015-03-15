@@ -21,10 +21,11 @@ public class Enemy {
     public static String enemyName;
     void getEnemy(){
         int enemy = (int)(Math.random()*2+1);
-        enemyLVL = (int)(1 + ArgusPyrrhus.LVL*Math.random());
+        enemyLVL = (int)(ArgusPyrrhus.LVL*Math.random());
         switch(enemy){
             case 0:
                 System.out.println("Nepritel utekl kdyz te videl");
+                nikdo();
                 break;
             case 1:
                 System.out.println("Narazil jsi na banditu! Jeho level je: "+enemyLVL);
@@ -37,6 +38,15 @@ public class Enemy {
         enemyDEX = (enemyLVL-1+10);
         enemyVIT = (enemyLVL-1+10);
         enemyZdravi = (5*enemyVIT);
+                
+        
+    }
+    void nikdo(){
+        enemyName = "Uprchlik";
+        enemySTR = 0;
+        enemyDEX = 0;
+        enemyVIT = 0;
+        enemyZdravi = 0;
                 
         
     }

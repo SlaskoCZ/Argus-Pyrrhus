@@ -11,7 +11,7 @@ package argus.pyrrhus;
  */
  
 public class Zobrazeni {
-    void JmenoHrdiny(){
+    void Hrdina(){
         System.out.println("Jmeno: "+ArgusPyrrhus.name);
         System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP);
         System.out.print("Sila: "+ArgusPyrrhus.STR+"   ");
@@ -20,5 +20,7 @@ public class Zobrazeni {
         System.out.println("Vitalita: "+ArgusPyrrhus.VIT+"   ");
         
     }
-    
+    void Enemy(){
+        System.out.println("Jmeno: "+Enemy.enemyName);
+    }
 }
