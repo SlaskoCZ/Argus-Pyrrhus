@@ -27,7 +27,7 @@ void Boj(){
         System.out.println("Zasahl jsi "+Enemy.enemyName+" za "+ArgusPyrrhus.hit+" bodu zdravi  zbyva mu "+(Enemy.enemyZdravi - ArgusPyrrhus.hit)+" bodu zdravi");
         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
     }
-    if (Enemy.enemyZdravi>0){
+    if (ArgusPyrrhus.zdravi<=0){
         System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi +" bodu zdravi" );
     } 
     else{
