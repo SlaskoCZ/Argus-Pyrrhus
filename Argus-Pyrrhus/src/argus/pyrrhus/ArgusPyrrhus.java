@@ -22,6 +22,7 @@ public class ArgusPyrrhus {
            public static int EXP;
            public static int zdravi;
            public static int hit;
+           public static double obtiznost;
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
@@ -31,15 +32,39 @@ public class ArgusPyrrhus {
         Zobrazeni zobrazeni = new Zobrazeni();
         Utilities utilities = new Utilities();
         Souboj souboj = new Souboj();
+        Mapa mapa = new Mapa();
         Enemy enemy = new Enemy();
                int i=0;
+        //Mapgen
+               mapa.mapgen();
+               
         //Staty
                vstup.stats();
                
         //Jmeno
                vstup.name();
+        //Obtiznost
+               vstup.vstup();
+               switch(Vstup.vstup){
+                   case "Easy":
+                       obtiznost=0.5;
+                       break;
+                   case "Normal":
+                       obtiznost=1;
+                       break;
+                   case "Hard":
+                       obtiznost=1.5;
+                       break;
+                   case "Impossible":
+                       obtiznost=2;
+                       break;
+                   case "Test":
+                       obtiznost = 0.1;
+                       break;       
+               }
             
         // Vypis do konzole
+        
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
             System.in.read();            

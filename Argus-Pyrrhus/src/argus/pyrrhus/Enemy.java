@@ -34,9 +34,9 @@ public class Enemy {
     }
     void bandita(){
         enemyName = "Bandita";
-        enemySTR = (enemyLVL-1+10);
-        enemyDEX = (enemyLVL-1+10);
-        enemyVIT = (enemyLVL-1+10);
+        enemySTR = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemyDEX = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemyVIT = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
         enemyZdravi = (5*enemyVIT);
                 
         
