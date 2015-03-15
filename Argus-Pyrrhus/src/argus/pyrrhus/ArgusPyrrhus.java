@@ -9,7 +9,7 @@ package argus.pyrrhus;
 import java.io.IOException;
 
 /**
- *
+ * @author Ssaruman
  * @author Slasko
  */
 public class ArgusPyrrhus {
