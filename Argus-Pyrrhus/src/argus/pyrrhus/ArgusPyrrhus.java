@@ -64,9 +64,10 @@ public class ArgusPyrrhus {
                        obtiznost = 0.1;
                        break;       
                }
-            
+        //Pozice
+               Mapa.heroMap[13][13]="X";
         // Vypis do konzole
-               mapa.mapVision();
+            mapa.mapVision();
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
             System.in.read();            
