@@ -21,7 +21,7 @@ public class Enemy {
     public static String enemyName;
     void getEnemy(){
         int enemy = (int)(1);
-        enemyLVL = (int)(ArgusPyrrhus.LVL*Math.random());
+        enemyLVL = (int)(1+ArgusPyrrhus.LVL*Math.random());
         switch(enemy){
             case 0:
                 System.out.println("Nepritel utekl kdyz te videl");
@@ -34,9 +34,9 @@ public class Enemy {
     }
     void bandita(){
         enemyName = "Bandita";
-        enemySTR = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
-        enemyDEX = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
-        enemyVIT = (int)(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemySTR =(int)Math.round(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemyDEX =(int)Math.round(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
+        enemyVIT =(int)Math.round(enemyLVL-1+10*ArgusPyrrhus.obtiznost);
         enemyZdravi = (5*enemyVIT);
                 
         
