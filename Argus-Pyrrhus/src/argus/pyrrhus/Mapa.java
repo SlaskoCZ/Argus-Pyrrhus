@@ -31,14 +31,13 @@ public class Mapa {
         
         for (int i=0; i<mapa.length; i++){
             for (int j=0;j<mapa[i].length; j++){
-                for (int h=0;h<mapa[i][j].length; h++){
                   mapa[i][j][0]=(int)Math.random()+1;
                   
                     
                     
                     
                     
-                }
+                  
             }
         }
         
@@ -46,9 +45,8 @@ public class Mapa {
     void mapVision(){
         
         for (int i=0; i<mapa.length; i++){
+            System.out.println("");
             for (int j=0;j<mapa[i].length; j++){
-                System.out.println("");
-                for (int h=0;h<mapa[i][j].length; h++){
                     System.out.print("["+mapa[i][j][0]+"]");
                   
                     
@@ -56,7 +54,7 @@ public class Mapa {
                     
                     
                 }
-            }
+            
         }
         
     }
