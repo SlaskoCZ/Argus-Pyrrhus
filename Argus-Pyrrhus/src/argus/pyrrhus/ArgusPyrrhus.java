@@ -13,7 +13,11 @@ import java.util.Scanner;
  * @author Slasko
  */
 public class ArgusPyrrhus {
-           public static String name;
+           public static int name;
+           public static int STR;
+           public static int INT;
+           public static int DEX;
+           public static int VIT;
 
     /**
      * @param args the command line arguments
@@ -27,7 +31,12 @@ public class ArgusPyrrhus {
         Console console;
                console = System.console();
                int i=0;
-        
+        //Staty
+               int STR=10;
+               int DEX=10;
+               int INT=10;
+               int VIT=10;
+              
         //Jmeno
             System.out.println("Zadej jmmeno hrdiny!");
             name = user_input.next();
@@ -38,7 +47,7 @@ public class ArgusPyrrhus {
            
             i++;
                 System.out.println("Zobrazeni: "+i);
-                 Thread.sleep(100000);
+                 Thread.sleep(10000);
                  
             }
        
