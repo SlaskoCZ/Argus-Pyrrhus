@@ -54,7 +54,7 @@ public class Staty {
                       
                       
                }
-                  ArgusPyrrhus.zdravi=(5*ArgusPyrrhus.VIT)
+                  ArgusPyrrhus.zdravi=(5*ArgusPyrrhus.VIT);
         }
     }
     void hit(){
