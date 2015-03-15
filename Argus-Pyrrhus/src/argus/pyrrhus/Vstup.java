@@ -10,6 +10,7 @@ import static argus.pyrrhus.ArgusPyrrhus.DEX;
 import static argus.pyrrhus.ArgusPyrrhus.INT;
 import static argus.pyrrhus.ArgusPyrrhus.STR;
 import static argus.pyrrhus.ArgusPyrrhus.VIT;
+import static argus.pyrrhus.ArgusPyrrhus.LVL;
 import static argus.pyrrhus.ArgusPyrrhus.name;
 import java.util.Scanner;
 
@@ -33,5 +34,6 @@ public class Vstup {
         DEX=10;
         INT=10;
         VIT=10;
+        LVL=1;
     }
 }
