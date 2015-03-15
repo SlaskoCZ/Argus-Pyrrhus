@@ -6,6 +6,7 @@
 package argus.pyrrhus;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -21,12 +22,12 @@ public class ArgusPyrrhus {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Vstup vstup = new Vstup();
-        Zobrazeni zobrazeni;
-               zobrazeni = new Zobrazeni();
-        
+        Zobrazeni zobrazeni = new Zobrazeni();
+        Utilities utilities = new Utilities();
                int i=0;
         //Staty
                STR=10;
@@ -38,9 +39,9 @@ public class ArgusPyrrhus {
                vstup.name();
             
         // Vypis do konzole
-            
+            utilities.clearConsole();
             zobrazeni.JmenoHrdiny();
-           
+            System.in.read();
 
                  
             
