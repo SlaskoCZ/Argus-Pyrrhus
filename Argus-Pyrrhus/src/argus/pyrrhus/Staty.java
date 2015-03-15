@@ -18,10 +18,10 @@ import java.util.Scanner;
  * @author Karel
  */
 public class Staty {
+    public static int lvlup;
     void exp(){
         int expgain = 20;
-       ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.EXP+ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));
-       int lvlup;
+       ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.EXP+ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));     
        lvlup = 100 + ArgusPyrrhus.LVL*expgain;
         if (lvlup<ArgusPyrrhus.EXP) {
             ArgusPyrrhus.LVL=ArgusPyrrhus.LVL+1;
