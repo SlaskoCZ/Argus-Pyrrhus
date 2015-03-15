@@ -20,7 +20,7 @@ import java.util.Scanner;
  * @author Slasko
  */
 public class Vstup {
-    
+    public static String vstup; 
     void name(){
     Scanner user_input;
        user_input = new Scanner(System.in);
@@ -39,4 +39,10 @@ public class Vstup {
         EXP=0;
         ArgusPyrrhus.zdravi=VIT*5;
     }
+    void vstup(){
+        Scanner user_input = new Scanner(System.in);
+        vstup = user_input.next();
+        
+    }
+            
 }
