@@ -29,10 +29,7 @@ public class ArgusPyrrhus {
         Utilities utilities = new Utilities();
                int i=0;
         //Staty
-               STR=10;
-               DEX=10;
-               INT=10;
-               VIT=10;
+               vstup.stats();
               
         //Jmeno
                vstup.name();
