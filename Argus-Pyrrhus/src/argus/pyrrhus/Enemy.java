@@ -20,7 +20,7 @@ public class Enemy {
     public static int enemyLVL;
     public static String enemyName;
     void getEnemy(){
-        int enemy = (int)(Math.random()*2+1);
+        int enemy = (int)(1);
         enemyLVL = (int)(ArgusPyrrhus.LVL*Math.random());
         switch(enemy){
             case 0:

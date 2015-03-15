@@ -14,6 +14,7 @@ public class Souboj {
 void Boj(){
     Enemy enemy = new Enemy();
     Staty staty = new Staty();
+    ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
     Zobrazeni zobrazeni = new Zobrazeni();
     zobrazeni.Hrdina();
     System.out.println("");
@@ -26,7 +27,7 @@ void Boj(){
         System.out.println("Ubral si "+Enemy.enemyName+" "+ArgusPyrrhus.hit+" bodu zdravi");
         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
     }
-    if (ArgusPyrrhus.zdravi>0){
+    if (Enemy.enemyZdravi>0){
         System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi+" bodu zdravi.");
     } 
     else

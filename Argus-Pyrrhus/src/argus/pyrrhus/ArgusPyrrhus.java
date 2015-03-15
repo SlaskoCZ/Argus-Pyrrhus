@@ -42,8 +42,7 @@ public class ArgusPyrrhus {
         // Vypis do konzole
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
-            System.in.read();
-            
+            System.in.read();            
             enemy.getEnemy();  
             souboj.Boj();
             System.in.read();
