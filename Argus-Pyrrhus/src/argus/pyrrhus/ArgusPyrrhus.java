@@ -33,6 +33,7 @@ public class ArgusPyrrhus {
         // Vypis do konzole
             while (true){
             zobrazeni.JmenoHrdiny();
+            
             }
        
                 
