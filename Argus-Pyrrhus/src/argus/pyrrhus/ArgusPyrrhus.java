@@ -27,7 +27,7 @@ public class ArgusPyrrhus {
         Console console;
                console = System.console();
                int i=0;
-           //proc to karlovi nefunguje
+        
         //Jmeno
             System.out.println("Zadej jmmeno hrdiny!");
             name = user_input.next();
