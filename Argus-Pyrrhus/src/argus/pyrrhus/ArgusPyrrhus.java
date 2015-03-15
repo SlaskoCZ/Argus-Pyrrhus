@@ -66,11 +66,16 @@ public class ArgusPyrrhus {
                }
         //Pozice
                Mapa.heroMap[13][13]="X";
+               Mapa.heroPos[0]=13;
+               Mapa.heroPos[1]=13;
         // Vypis do konzole
             mapa.mapVision();
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
-            System.in.read();            
+            System.in.read();
+            while (true){
+                mapa.rozcesti();
+            }
             while (true){
             enemy.getEnemy();  
             souboj.Boj();
