@@ -33,8 +33,8 @@ void Boj(){
     else{
         System.out.println(Enemy.enemyName+" vubec netusil co se stalo");
     staty.exp();
-        System.out.println("Tvuj aktualni lvl je "+ArgusPyrrhus.LVL+" a tve aktualni zkusenosti jsou "+ArgusPyrrhus.exp );
-    
+        System.out.println("Tvuj aktualni lvl je "+ArgusPyrrhus.LVL+" a tve aktualni zkusenosti jsou "+ArgusPyrrhus.EXP );
+    ArgusPyrrhus.zdravi=(int)(ArgusPyrrhus.obtiznost * 30); 
     }
     
 }
