@@ -66,14 +66,14 @@ public class ArgusPyrrhus {
                }
             
         // Vypis do konzole
-        
+               mapa.mapVision();
             utilities.clearConsole();
             System.out.println("Zmackni enter a najdes si soupere");
             System.in.read();            
             while (true){
             enemy.getEnemy();  
             souboj.Boj();
-                System.out.println("Dalsi souboj? Zmackni enter");
+            System.out.println("Dalsi souboj? Zmackni enter");
             System.in.read();
             }
                  
