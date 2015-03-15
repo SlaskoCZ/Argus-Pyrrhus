@@ -25,6 +25,7 @@ public class ArgusPyrrhus {
                zobrazeni = new Zobrazeni();
         Console console;
                console = System.console();
+               int i=1;
 
         //Jmeno
             System.out.println("Zadej jmmeno hrdiny!");
@@ -33,7 +34,8 @@ public class ArgusPyrrhus {
         // Vypis do konzole
             while (true){
             zobrazeni.JmenoHrdiny();
-            
+            i = i++;
+                System.out.println("Zobrazeni: "+i);
             }
        
                 
