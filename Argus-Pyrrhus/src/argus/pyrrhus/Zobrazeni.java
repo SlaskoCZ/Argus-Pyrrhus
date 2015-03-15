@@ -15,7 +15,7 @@ import argus.pyrrhus.ArgusPyrrhus;
 public class Zobrazeni {
     void JmenoHrdiny(){
         System.out.println("Jmeno: "+ArgusPyrrhus.name);
-        System.out.print("Sila: "+ArgusPyrrhus.STR+"          ");
+        System.out.print("Sila: "+ArgusPyrrhus.STR+"   ");
         System.out.println("Obratnost: "+ArgusPyrrhus.DEX+"   ");
         System.out.print("Inteligence: "+ArgusPyrrhus.INT+"   ");
         System.out.println("Vitalita: "+ArgusPyrrhus.VIT+"   ");
