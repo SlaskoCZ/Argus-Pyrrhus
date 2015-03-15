@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class Staty {
     void exp(){
         int expgain = 5;
-       ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));
+       ArgusPyrrhus.EXP = (int)(ArgusPyrrhus.EXP+ArgusPyrrhus.LVL + expgain *ArgusPyrrhus.obtiznost * (1.1 - 0.2* Math.random()));
        int lvlup;
        lvlup = 100 + ArgusPyrrhus.LVL*expgain;
         if (lvlup<ArgusPyrrhus.EXP) {
