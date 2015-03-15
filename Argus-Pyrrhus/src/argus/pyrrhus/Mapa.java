@@ -31,7 +31,7 @@ public class Mapa {
         
         for (int i=0; i<mapa.length; i++){
             for (int j=0;j<mapa[i].length; j++){
-                  mapa[i][j][0]=(int)Math.random()+1;
+                  mapa[i][j][0]=(int)(Math.random()*5+1);
                   
                     
                     
