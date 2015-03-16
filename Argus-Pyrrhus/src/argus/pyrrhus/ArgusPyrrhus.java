@@ -82,6 +82,8 @@ public class ArgusPyrrhus {
         while (true) {
             mapa.rozcesti();
             lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
+            vstup.vstup();
+            utilities.clearConsole();
         }
 //        while (zdravi > 0) {
 //            enemy.getEnemy();
