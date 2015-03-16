@@ -9,8 +9,8 @@ package argus.pyrrhus;
  *
  * @author Slasko
  */
-
 public class Enemy {
+
     public static int enemySTR;
     public static int enemyDMG;
     public static int enemyVIT;

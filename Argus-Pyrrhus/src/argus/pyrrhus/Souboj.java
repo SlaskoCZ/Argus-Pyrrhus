@@ -11,33 +11,32 @@ package argus.pyrrhus;
  */
 public class Souboj {
 
-void Boj(){
-    Enemy enemy = new Enemy();
-    Staty staty = new Staty();
-    ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
-    Zobrazeni zobrazeni = new Zobrazeni();
-    zobrazeni.Hrdina();
-    System.out.println("");
-    zobrazeni.Enemy();
-    while (Enemy.enemyZdravi >0 && ArgusPyrrhus.zdravi >0){
-        staty.hit();
-        staty.enemyHit();
-        System.out.println(Enemy.enemyName+" te zasahl za "+Enemy.enemyHit+" bodu zdravi   tve zbyvajici zdravi je "+(ArgusPyrrhus.zdravi-Enemy.enemyHit));
-        ArgusPyrrhus.zdravi = (ArgusPyrrhus.zdravi-Enemy.enemyHit);
-        System.out.println("Zasahl jsi "+Enemy.enemyName+" za "+ArgusPyrrhus.hit+" bodu zdravi  zbyva mu "+(Enemy.enemyZdravi - ArgusPyrrhus.hit)+" bodu zdravi");
-        Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+    void Boj() {
+        Enemy enemy = new Enemy();
+        Staty staty = new Staty();
+        ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
+        Zobrazeni zobrazeni = new Zobrazeni();
+        zobrazeni.Hrdina();
+        System.out.println("");
+        zobrazeni.Enemy();
+        while (Enemy.enemyZdravi > 0 && ArgusPyrrhus.zdravi > 0) {
+            staty.hit();
+            staty.enemyHit();
+            System.out.println(Enemy.enemyName + " te zasahl za " + Enemy.enemyHit + " bodu zdravi   tve zbyvajici zdravi je " + (ArgusPyrrhus.zdravi - Enemy.enemyHit));
+            ArgusPyrrhus.zdravi = (ArgusPyrrhus.zdravi - Enemy.enemyHit);
+            System.out.println("Zasahl jsi " + Enemy.enemyName + " za " + ArgusPyrrhus.hit + " bodu zdravi  zbyva mu " + (Enemy.enemyZdravi - ArgusPyrrhus.hit) + " bodu zdravi");
+            Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+        }
+        if (ArgusPyrrhus.zdravi <= 0) {
+            System.out.println("Bohuzel nejsi dost silny a prohral si s " + Enemy.enemyName + " zbylo mu " + Enemy.enemyZdravi + " bodu zdravi");
+        } else {
+            System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
+            staty.exp();
+            staty.MONEY();
+            System.out.println("");
+
+        }
+
     }
-    if (ArgusPyrrhus.zdravi<=0){
-        System.out.println("Bohuzel nejsi dost silny a prohral si s "+Enemy.enemyName+" zbylo mu "+Enemy.enemyZdravi +" bodu zdravi" );
-    } 
-    else{
-        System.out.println(Enemy.enemyName+" vubec netusil co se stalo");
-    staty.exp();
-    staty.MONEY();
-        System.out.println(""); 
-        
-    }
-    
-}
 
 }

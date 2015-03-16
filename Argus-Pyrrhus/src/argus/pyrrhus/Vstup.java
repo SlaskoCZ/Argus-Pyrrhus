@@ -21,30 +21,33 @@ import java.util.Scanner;
  * @author Slasko
  */
 public class Vstup {
-    public static String vstup; 
-    void name(){
-    Scanner user_input;
-       user_input = new Scanner(System.in);
-       //Jmeno
+
+    public static String vstup;
+
+    void name() {
+        Scanner user_input;
+        user_input = new Scanner(System.in);
+        //Jmeno
         System.out.println("Zadej jmmeno hrdiny!");
         name = user_input.next();
-            
-               
-}
-    void stats(){
-        STR=10;
-        DEX=10;
-        INT=10;
-        VIT=10;
-        LVL=1;
-        EXP=0;
-        zdravi=VIT*5;
-        money= 100;
+
     }
-    void vstup(){
+
+    void stats() {
+        STR = 10;
+        DEX = 10;
+        INT = 10;
+        VIT = 10;
+        LVL = 1;
+        EXP = 0;
+        zdravi = VIT * 5;
+        money = 100;
+    }
+
+    void vstup() {
         Scanner user_input = new Scanner(System.in);
         vstup = user_input.next();
-        
+
     }
-            
+
 }

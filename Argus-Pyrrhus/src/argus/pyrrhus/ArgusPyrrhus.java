@@ -5,7 +5,6 @@
  */
 package argus.pyrrhus;
 
-
 import java.io.IOException;
 
 /**
@@ -13,17 +12,19 @@ import java.io.IOException;
  * @author Slasko
  */
 public class ArgusPyrrhus {
-           public static String name;
-           public static int STR;
-           public static int INT;
-           public static int DEX;
-           public static int VIT;
-           public static int LVL;
-           public static int EXP;
-           public static int zdravi;
-           public static int hit;
-           public static int money;
-           public static double obtiznost;
+
+    public static String name;
+    public static int STR;
+    public static int INT;
+    public static int DEX;
+    public static int VIT;
+    public static int LVL;
+    public static int EXP;
+    public static int zdravi;
+    public static int hit;
+    public static int money;
+    public static double obtiznost;
+
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
@@ -36,61 +37,57 @@ public class ArgusPyrrhus {
         Souboj souboj = new Souboj();
         Mapa mapa = new Mapa();
         Enemy enemy = new Enemy();
-               int i=0;
+        int i = 0;
         //Mapgen
-               mapa.mapgen();
-               
+        mapa.mapgen();
+
         //Staty
-               vstup.stats();
-               
+        vstup.stats();
+
         //Jmeno
-               vstup.name();
+        vstup.name();
         //Obtiznost
-               System.out.println("Obtiznost (Easy,Normal,Hard,Impossible)");
-               System.out.print("Zadej obtiznost: ");
-               vstup.vstup();
-               switch(Vstup.vstup){
-                   case "Easy":
-                       obtiznost=0.5;
-                       break;
-                   case "Normal":
-                       obtiznost=1;
-                       break;
-                   case "Hard":
-                       obtiznost=1.5;
-                       break;
-                   case "Impossible":
-                       obtiznost=2;
-                       break;
-                   case "Test":
-                       obtiznost = 0.1;
-                       break;       
-               }
+        System.out.println("Obtiznost (Easy,Normal,Hard,Impossible)");
+        System.out.print("Zadej obtiznost: ");
+        vstup.vstup();
+        switch (Vstup.vstup) {
+            case "Easy":
+                obtiznost = 0.5;
+                break;
+            case "Normal":
+                obtiznost = 1;
+                break;
+            case "Hard":
+                obtiznost = 1.5;
+                break;
+            case "Impossible":
+                obtiznost = 2;
+                break;
+            case "Test":
+                obtiznost = 0.1;
+                break;
+        }
         //Pozice
-               Mapa.heroMap[13][13]="X";
-               Mapa.heroPos[0]=13;
-               Mapa.heroPos[1]=13;
+        Mapa.heroMap[13][13] = "X";
+        Mapa.heroPos[0] = 13;
+        Mapa.heroPos[1] = 13;
         // Vypis do konzole
-            mapa.mapVision();
-            utilities.clearConsole();
-            System.out.println("Zmackni enter a najdes si soupere");
-            System.in.read();
+        mapa.mapVision();
+        utilities.clearConsole();
+        System.out.println("Zmackni enter a najdes si soupere");
+        System.in.read();
 //            while (true){
 //                mapa.rozcesti();
 //            }
-            while (zdravi>0){
-            enemy.getEnemy();  
+        while (zdravi > 0) {
+            enemy.getEnemy();
             souboj.Boj();
             zobrazeni.Hrdina();
             lokace.getLocation(Mapa.mapa[Mapa.heroPos[1]][Mapa.heroPos[2]][1]);
             System.out.println("Dalsi souboj? Zmackni enter");
             System.in.read();
-            }
-                 
-            
-       
-                
+        }
+
     }
-  
-   
+
 }
