@@ -23,6 +23,7 @@ import java.util.Scanner;
 public class Vstup {
 
     public static String vstup;
+    public static int vstupint;
 
     void name() {
         Scanner user_input;
@@ -34,10 +35,10 @@ public class Vstup {
     }
 
     void stats() {
-        STR = 10;
-        DEX = 10;
+        STR = 10+ArgusPyrrhus.itemstr;
+        DEX = 10+ArgusPyrrhus.itemdex;
         INT = 10;
-        VIT = 10;
+        VIT = 10+ArgusPyrrhus.itemvit;
         LVL = 1;
         EXP = 0;
         zdravi = VIT * 5;
@@ -47,6 +48,11 @@ public class Vstup {
     void vstup() {
         Scanner user_input = new Scanner(System.in);
         vstup = user_input.next();
+
+    }
+    void vstupint() {
+        Scanner user_input = new Scanner(System.in);
+        vstupint = user_input.nextInt();
 
     }
 

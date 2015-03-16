@@ -23,6 +23,10 @@ public class ArgusPyrrhus {
     public static int zdravi;
     public static int hit;
     public static int money;
+    public static int itemstr;
+    public static int itemdex;
+    public static int itemvit;
+    public static int itemdmg;
     public static double obtiznost;
 
     /**
