@@ -36,6 +36,7 @@ public class Shop {
                             payment = true;
                             money -= cena;
                             databazeitemu.HP();
+                            System.out.println("Predmet zakoupen");
                             break;
 
                         }
@@ -54,6 +55,7 @@ public class Shop {
                             payment = true;
                             money -= cena;
                             databazeitemu.ID1();
+                            System.out.println("Predmet zakoupen");
                             break;
 
                         }
