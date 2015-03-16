@@ -38,7 +38,7 @@ public class Shop {
                         }
 
                     case "ne":
-                        shop.nakup();
+                        nakup();
                         break;
                 }
             case 2:
@@ -56,7 +56,7 @@ public class Shop {
                         }
 
                     case "ne":
-                        shop.nakup();
+                        nakup();
                         break;
 
                 }
