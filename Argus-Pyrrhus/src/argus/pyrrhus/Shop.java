@@ -33,7 +33,7 @@ public class Shop {
         System.out.println("5. Cerne kopi");
         System.out.println("6. Obchodnikuv stary mec");
         System.out.println("7. Slavna skryta cepel");
-        System.out.print("Tvoje volba: ");
+        System.out.print("8. Zpet do menu ");
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
@@ -185,6 +185,9 @@ public class Shop {
                         break;
 
                 }
+            case 8:
+                menu.hlavniMenu();
+                break;
         }
     }
 }
