@@ -24,6 +24,7 @@ public class Shop {
 
     void nakup() throws IOException {
         System.out.println("Obchod");
+        System.out.println("0. Zpet do menu");
         System.out.println("1. HP lektvar");
         System.out.println("2. zelezna dyka");
         System.out.println("3. Zelezne kladivo");
