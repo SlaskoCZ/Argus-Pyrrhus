@@ -28,7 +28,7 @@ public class Lokace {
                 les();
                 break;
             case 4:
-                prdel();
+                jeskyne();
                 break;
         }
     }
@@ -61,8 +61,8 @@ public class Lokace {
         System.out.println("3. odejit");
     }
 
-    void prdel() {
-        System.out.println("Prisel si na louku, v dali vidis " + Enemy.enemyName);
+    void jeskyne() {
+        System.out.println("Prisel jsi k jeskyni, v dali vidis " + Enemy.enemyName);
         System.out.println("1. priblizit se");
         System.out.println("2. zautocit");
         System.out.println("3. odejit");
