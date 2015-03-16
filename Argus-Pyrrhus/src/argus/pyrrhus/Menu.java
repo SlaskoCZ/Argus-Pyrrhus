@@ -6,8 +6,8 @@
 package argus.pyrrhus;
 
 import static argus.pyrrhus.ArgusPyrrhus.obtiznost;
-import static argus.pyrrhus.Mapa.heroMap;
 import static argus.pyrrhus.Mapa.heroPos;
+import java.io.IOException;
 
 /**
  *
@@ -24,17 +24,24 @@ public class Menu {
     Enemy enemy = new Enemy();
 
     //Hlavni menu
-    void hlavniMenu() {
+    void hlavniMenu() throws IOException {
+        System.out.println("0. Testovaci Rezim ");
         System.out.println("1. Mapa ");
-        System.out.println("1. Shop ");
-        System.out.println("1. Rychly Souboj");
-        System.out.println("1. ");
+        System.out.println("2. Shop ");
+        System.out.println("3. Rychly Souboj");
+        System.out.println("4. ");
         System.out.println("5.Ukoncit");
         System.out.print("Tvoje volba: ");
         vstup.vstup();
+        utilities.clearConsole();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
                 System.out.println("Testovaci rezim");
+                ArgusPyrrhus.STR=100;
+                ArgusPyrrhus.DEX=100;
+                ArgusPyrrhus.INT=100;
+                ArgusPyrrhus.VIT=100;
+                ArgusPyrrhus.money=2000000;
                 break;
             case 1:
                 rozcesti();
@@ -51,12 +58,16 @@ public class Menu {
             case 5:
                 System.exit(1);
                 break;
+            default:
+                hlavniMenu();
+                break;
         }
-
+        System.in.read();
+        utilities.clearConsole();
+        hlavniMenu();
     }
 
     //Rozcesti od 1. Mapa
-
     void rozcesti() {
         System.out.println("");
         System.out.println("Rozcesti:");
@@ -105,9 +116,8 @@ public class Menu {
 
     }
 
-    
-        void obtiznost() {
-    System.out.println("Obtiznost (Easy,Normal,Hard,Impossible)");
+    void obtiznost() {
+        System.out.println("Obtiznost (Easy,Normal,Hard,Impossible)");
         System.out.print("Zadej obtiznost: ");
         vstup.vstup();
         switch (Vstup.vstup) {
@@ -132,5 +142,3 @@ public class Menu {
         }
     }
 }
-
-
