@@ -77,8 +77,8 @@ public class Enemy {
         enemyName = "Strom Veku";
         enemySTR =(int)Math.round(enemyLVL-1+1*ArgusPyrrhus.obtiznost);
         enemyDEX =(int)Math.round(enemyLVL-1+0*ArgusPyrrhus.obtiznost);
-        enemyVIT =(int)Math.round(enemyLVL-1+80*ArgusPyrrhus.obtiznost);
-        enemyZdravi = (20*enemyVIT);
+        enemyVIT =(int)Math.round(enemyLVL-1+20*ArgusPyrrhus.obtiznost);
+        enemyZdravi = (12*enemyVIT);
                 
         
     }
