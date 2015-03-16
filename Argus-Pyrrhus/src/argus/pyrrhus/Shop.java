@@ -33,7 +33,7 @@ public class Shop {
         System.out.println("5. Cerne kopi");
         System.out.println("6. Obchodnikuv stary mec");
         System.out.println("7. Slavna skryta cepel");
-        System.out.print("8. Zpet do menu ");
+        System.out.print(" ");
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
@@ -51,6 +51,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.HP();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -71,6 +72,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -92,6 +94,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -113,6 +116,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -134,6 +138,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -155,6 +160,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -176,6 +182,7 @@ public class Shop {
                             money -= cena;
                             databazeitemu.ID1();
                             System.out.println("Predmet zakoupen");
+                            menu.hlavniMenu();
                             break;
 
                         }
@@ -185,9 +192,7 @@ public class Shop {
                         break;
 
                 }
-            case 8:
-                menu.hlavniMenu();
-                break;
+            
         }
     }
 }
