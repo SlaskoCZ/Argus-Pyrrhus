@@ -19,7 +19,8 @@ public class Shop {
     int vyber;
     int cena;
 
-    public static Boolean payment;
+    public static Boolean payment = false;
+    
 
     void nakup() throws IOException {
         Menu menu = new Menu();
