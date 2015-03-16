@@ -10,12 +10,13 @@ package argus.pyrrhus;
  * @author Slasko
  */
 public class Souboj {
-
-    void Boj() {
         Enemy enemy = new Enemy();
         Staty staty = new Staty();
         ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
         Zobrazeni zobrazeni = new Zobrazeni();
+
+    void Boj() {
+        
         zobrazeni.Hrdina();
         System.out.println("");
         zobrazeni.Enemy();
