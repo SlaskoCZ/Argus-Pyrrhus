@@ -22,6 +22,7 @@ public class Menu {
     Shop shop = new Shop();
     Souboj souboj = new Souboj();
     Enemy enemy = new Enemy();
+    Zobrazeni zobrazeni = new Zobrazeni();
 
     //Hlavni menu
     void hlavniMenu() throws IOException {
@@ -29,7 +30,7 @@ public class Menu {
         System.out.println("1. Mapa ");
         System.out.println("2. Shop ");
         System.out.println("3. Rychly Souboj");
-        System.out.println("4. ");
+        System.out.println("4. Charakter");
         System.out.println("5.Ukoncit");
         System.out.print("Tvoje volba: ");
         vstup.vstup();
@@ -54,6 +55,7 @@ public class Menu {
                 souboj.Boj();
                 break;
             case 4:
+                zobrazeni.Hrdina();
                 break;
             case 5:
                 System.exit(1);
