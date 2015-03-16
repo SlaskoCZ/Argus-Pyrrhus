@@ -18,6 +18,7 @@ public class Mapa {
     void rozcesti() {
         Utilities utilities = new Utilities();
         Lokace lokace = new Lokace();
+        Shop shop = new Shop();
         Vstup vstup = new Vstup();
         System.out.println("");
         System.out.println("Rozcesti:");
@@ -27,6 +28,7 @@ public class Mapa {
         System.out.println("4.Doleva");
         System.out.println("5.Zustat");
         System.out.println("6.Mapa");
+        System.out.println("7.Shop");
         System.out.print("Tvoje volba: ");
         vstup.vstup();
         int x = Integer.valueOf(Vstup.vstup);
@@ -34,25 +36,28 @@ public class Mapa {
         switch (x) {
             case 1:
                 heroPos[0]--;
-                newPosition=true;
+                newPosition = true;
                 break;
             case 2:
                 heroPos[0]++;
-                newPosition=true;
+                newPosition = true;
                 break;
             case 3:
                 heroPos[1]++;
-                newPosition=true;
+                newPosition = true;
                 break;
             case 4:
                 heroPos[1]--;
-                newPosition=true;
+                newPosition = true;
                 break;
             case 5:
-                
+
                 break;
             case 6:
                 mapVision();
+                break;
+            case 7:
+                shop.nakup();
                 break;
             default:
                 System.exit(1);
@@ -60,11 +65,10 @@ public class Mapa {
 
         }
         utilities.clearConsole();
-        if (newPosition == true){
+        if (newPosition == true) {
             lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
         }
-                
-        
+
         heroMap[heroPos[0]][heroPos[1]] = "X";
     }
 
