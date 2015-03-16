@@ -6,6 +6,7 @@
 package argus.pyrrhus;
 
 import static argus.pyrrhus.ArgusPyrrhus.money;
+import static argus.pyrrhus.ArgusPyrrhus.zdravi;
 import static argus.pyrrhus.ArgusPyrrhus.DEX;
 import static argus.pyrrhus.ArgusPyrrhus.INT;
 import static argus.pyrrhus.ArgusPyrrhus.STR;
@@ -37,8 +38,8 @@ public class Vstup {
         VIT=10;
         LVL=1;
         EXP=0;
-        ArgusPyrrhus.zdravi=VIT*5;
-        ArgusPyrrhus.money= 100;
+        zdravi=VIT*5;
+        money= 100;
     }
     void vstup(){
         Scanner user_input = new Scanner(System.in);
