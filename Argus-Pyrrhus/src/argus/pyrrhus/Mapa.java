@@ -25,24 +25,33 @@ public class Mapa {
         System.out.println("2.Dolu");
         System.out.println("3.Doprava");
         System.out.println("4.Doleva");
-        System.out.println("5.Mapa");
+        System.out.println("5.Zustat");
+        System.out.println("6.Mapa");
         System.out.print("Tvoje volba: ");
         vstup.vstup();
         int x = Integer.valueOf(Vstup.vstup);
+        boolean newPos = false;
         switch (x) {
             case 1:
                 heroPos[0]--;
+                newPos=true;
                 break;
             case 2:
                 heroPos[0]++;
+                newPos=true;
                 break;
             case 3:
                 heroPos[1]++;
+                newPos=true;
                 break;
             case 4:
                 heroPos[1]--;
+                newPos=true;
                 break;
             case 5:
+                
+                break;
+            case 6:
                 mapVision();
                 break;
             default:
@@ -50,6 +59,10 @@ public class Mapa {
                 break;
 
         }
+        if (newPos = true){
+            lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
+        }
+                
         utilities.clearConsole();
         heroMap[heroPos[0]][heroPos[1]] = "X";
     }
