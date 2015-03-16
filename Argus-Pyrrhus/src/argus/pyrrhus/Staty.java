@@ -64,7 +64,7 @@ public class Staty {
             critical = 1;
         }
         //síla utoku
-        ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.STR * (1.1 - 0.2 * Math.random()) * critical));
+        ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.STR * (1.1 - 0.2 * Math.random()) * critical)+ArgusPyrrhus.itemdmg);
 
     }
 
