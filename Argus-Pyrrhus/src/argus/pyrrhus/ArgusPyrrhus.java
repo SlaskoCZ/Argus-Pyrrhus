@@ -40,6 +40,7 @@ public class ArgusPyrrhus {
         Utilities utilities = new Utilities();
         Lokace lokace = new Lokace();
         Souboj souboj = new Souboj();
+        Menu menu = new Menu();
         Mapa mapa = new Mapa();
         Shop shop = new Shop();
         Enemy enemy = new Enemy();
@@ -81,27 +82,10 @@ public class ArgusPyrrhus {
         Mapa.heroPos[0] = 13;
         Mapa.heroPos[1] = 13;
         // Vypis do konzole
-        mapa.mapVision();
         utilities.clearConsole();
-        System.out.println("Zmackni enter a najdes si soupere");
-        System.in.read();
-        while (true) {
-            mapa.rozcesti();
-            vstup.vstup();
-            switch (Integer.valueOf(Vstup.vstup)) {
-                case 1:
-                    System.out.println("Neni hotovo");
-                    break;
-                case 2:
-                    souboj.Boj();
-                    break;
-                case 3:
-                    System.out.println("Odchazim ...");
-                    break;
-            }
-            Thread.sleep(1000);
-            utilities.clearConsole();
-        }
+        menu.hlavniMenu();
+        
+        
 //        while (zdravi > 0) {
 //            enemy.getEnemy();
 //            souboj.Boj();
