@@ -16,13 +16,13 @@ public class Shop {
 
     Vstup vstup = new Vstup();
     Databazeitemu databazeitemu = new Databazeitemu();
-    Menu menu = new Menu();
     int vyber;
     int cena;
 
     public static Boolean payment;
 
     void nakup() throws IOException {
+        Menu menu = new Menu();
         System.out.println("Obchod");
         System.out.println("0. Zpet do menu");
         System.out.println("1. HP lektvar");
@@ -32,6 +32,7 @@ public class Shop {
         System.out.println("5. Cerne kopi");
         System.out.println("6. Obchodnikuv stary mec");
         System.out.println("7. Slavna skryta cepel");
+        System.out.print("Tvoje volba: ");
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
