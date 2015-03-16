@@ -32,6 +32,7 @@ public class ArgusPyrrhus {
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
+     * @throws java.lang.InterruptedException
      */
     public static void main(String[] args) throws IOException, InterruptedException {
         Vstup vstup = new Vstup();
@@ -40,6 +41,7 @@ public class ArgusPyrrhus {
         Lokace lokace = new Lokace();
         Souboj souboj = new Souboj();
         Mapa mapa = new Mapa();
+        Shop shop = new Shop();
         Enemy enemy = new Enemy();
         int i = 0;
         //Mapgen
@@ -85,9 +87,8 @@ public class ArgusPyrrhus {
         System.in.read();
         while (true) {
             mapa.rozcesti();
-            
             vstup.vstup();
-            switch (Integer.valueOf(Vstup.vstup)){
+            switch (Integer.valueOf(Vstup.vstup)) {
                 case 1:
                     System.out.println("Neni hotovo");
                     break;
