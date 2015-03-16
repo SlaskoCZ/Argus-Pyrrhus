@@ -46,7 +46,7 @@ public class Mapa {
                 mapVision();
                 break;
             default:
-                rozcesti();
+                System.exit(1);
                 break;
 
         }
