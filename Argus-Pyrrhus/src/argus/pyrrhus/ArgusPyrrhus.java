@@ -33,7 +33,7 @@ public class ArgusPyrrhus {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         Vstup vstup = new Vstup();
         Zobrazeni zobrazeni = new Zobrazeni();
         Utilities utilities = new Utilities();
@@ -85,8 +85,20 @@ public class ArgusPyrrhus {
         System.in.read();
         while (true) {
             mapa.rozcesti();
-            lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
+            
             vstup.vstup();
+            switch (Integer.valueOf(Vstup.vstup)){
+                case 1:
+                    System.out.println("Neni hotovo");
+                    break;
+                case 2:
+                    souboj.Boj();
+                    break;
+                case 3:
+                    System.out.println("Odchazim ...");
+                    break;
+            }
+            Thread.sleep(1000);
             utilities.clearConsole();
         }
 //        while (zdravi > 0) {
