@@ -5,15 +5,8 @@
  */
 package argus.pyrrhus;
 
-import static argus.pyrrhus.ArgusPyrrhus.STR;
-import static argus.pyrrhus.ArgusPyrrhus.INT;
-import static argus.pyrrhus.ArgusPyrrhus.DEX;
-import static argus.pyrrhus.ArgusPyrrhus.VIT;
-import static argus.pyrrhus.ArgusPyrrhus.EXP;
-import static argus.pyrrhus.ArgusPyrrhus.LVL;
-import static argus.pyrrhus.ArgusPyrrhus.obtiznost;
-import static argus.pyrrhus.ArgusPyrrhus.money;
-import java.util.Scanner;
+
+
   
 /**
  *
@@ -58,8 +51,6 @@ public class Staty {
         }
     }
     void hit(){
-    //zdraví
-    
     //critical sance
     float sance = ((float)ArgusPyrrhus.DEX * (0.5f));
     int critical;
