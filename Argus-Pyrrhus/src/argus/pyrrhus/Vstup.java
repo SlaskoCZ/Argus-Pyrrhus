@@ -23,7 +23,7 @@ import java.util.Scanner;
 public class Vstup {
 
     public static String vstup;
-    public static int vstupint;
+    
 
     void name() {
         Scanner user_input;
@@ -49,11 +49,5 @@ public class Vstup {
         Scanner user_input = new Scanner(System.in);
         vstup = user_input.next();
 
-    }
-    void vstupint() {
-        Scanner user_input = new Scanner(System.in);
-        vstupint = user_input.nextInt();
-
-    }
-
+   
 }
