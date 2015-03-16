@@ -52,8 +52,8 @@ public class Mapa {
 
         for (int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[i].length; j++) {
-                mapa[i][j][0] = (int) (Math.random() * 5 + 1);   //Enemy
-                mapa[i][j][1] = (int) (Math.random() * 5 + 1);   //Lokace
+                mapa[i][j][0] = (int) (Math.random() * 5);   //Enemy
+                mapa[i][j][1] = (int) (Math.random() * 5);   //Lokace
                 heroMap[i][j] = "0";
             }
         }

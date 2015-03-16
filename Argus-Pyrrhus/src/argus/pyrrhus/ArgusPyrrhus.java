@@ -66,6 +66,9 @@ public class ArgusPyrrhus {
             case "Test":
                 obtiznost = 0.1;
                 break;
+            default:
+                obtiznost = 1;
+                break;
         }
         //Pozice
         Mapa.heroMap[13][13] = "X";
@@ -76,14 +79,15 @@ public class ArgusPyrrhus {
         utilities.clearConsole();
         System.out.println("Zmackni enter a najdes si soupere");
         System.in.read();
-//            while (true){
-//                mapa.rozcesti();
-//            }
+        while (true) {
+            mapa.rozcesti();
+            lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
+        }
         while (zdravi > 0) {
             enemy.getEnemy();
             souboj.Boj();
             zobrazeni.Hrdina();
-            lokace.getLocation(Mapa.mapa[Mapa.heroPos[1]][Mapa.heroPos[2]][1]);
+
             System.out.println("Dalsi souboj? Zmackni enter");
             System.in.read();
         }
