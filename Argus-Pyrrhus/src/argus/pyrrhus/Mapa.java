@@ -24,9 +24,12 @@ public class Mapa {
                 mapa[i][j][0] = (int) (Math.random() * 5);   //Enemy
                 mapa[i][j][1] = (int) (Math.random() * 5);   //Lokace
                 heroMap[i][j] = "0";
+                
             }
         }
-
+        heroMap[13][13] = "X";
+        heroPos[0] = 13;
+        heroPos[1] = 13;
     }
 
     void mapVision() {
