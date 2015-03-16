@@ -21,6 +21,9 @@ public class Shop {
     public static Boolean payment;
 
     void nakup() {
+        System.out.println("Obchod");
+        System.out.println("1. HP lektvar");
+        System.out.println("2. zelezna dyka");
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 1:
@@ -50,7 +53,7 @@ public class Shop {
                         if (money - cena > 0) {
                             payment = true;
                             money -= cena;
-                            databazeitemu.HP();
+                            databazeitemu.ID1();
                             break;
 
                         }
