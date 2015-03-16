@@ -6,6 +6,7 @@
 package argus.pyrrhus;
 
 import static argus.pyrrhus.ArgusPyrrhus.money;
+import java.io.IOException;
 
 /**
  *
@@ -15,12 +16,13 @@ public class Shop {
 
     Vstup vstup = new Vstup();
     Databazeitemu databazeitemu = new Databazeitemu();
+    Menu menu = new Menu();
     int vyber;
     int cena;
 
     public static Boolean payment;
 
-    void nakup() {
+    void nakup() throws IOException {
         System.out.println("Obchod");
         System.out.println("1. HP lektvar");
         System.out.println("2. zelezna dyka");
@@ -31,10 +33,13 @@ public class Shop {
         System.out.println("7. Slavna skryta cepel");
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
+            case 0:
+                menu.hlavniMenu();
+                break;
             case 1:
                 databazeitemu.HP();
                 cena = 25;
-                System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -47,14 +52,14 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
                 }
             case 2:
                 databazeitemu.ID1();
                 cena = 200;
-               System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -67,7 +72,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -75,7 +80,7 @@ public class Shop {
             case 3:
                 databazeitemu.ID2();
                 cena = 300;
-               System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -88,7 +93,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -96,7 +101,7 @@ public class Shop {
             case 4:
                 databazeitemu.ID3();
                 cena = 500;
-               System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -109,7 +114,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -117,7 +122,7 @@ public class Shop {
             case 5:
                 databazeitemu.ID4();
                 cena = 750;
-               System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -130,7 +135,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -138,7 +143,7 @@ public class Shop {
             case 6:
                 databazeitemu.ID5();
                 cena = 1500;
-               System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -151,7 +156,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -159,7 +164,7 @@ public class Shop {
             case 7:
                 databazeitemu.ID6();
                 cena = 5000;
-              System.out.println("Opravdu chcete koupit "+Databazeitemu.name+" za " + cena + " ?[ano/ne]");
+                System.out.println("Opravdu chcete koupit " + Databazeitemu.name + " za " + cena + " ?[ano/ne]");
                 vstup.vstup();
                 switch (Vstup.vstup) {
                     case "ano":
@@ -172,7 +177,7 @@ public class Shop {
 
                         }
 
-                    default :
+                    default:
                         nakup();
                         break;
 
@@ -180,4 +185,3 @@ public class Shop {
         }
     }
 }
-
