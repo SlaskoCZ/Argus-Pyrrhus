@@ -15,7 +15,6 @@ public class Shop {
 
     Vstup vstup = new Vstup();
     Databazeitemu databazeitemu = new Databazeitemu();
-    Shop shop = new Shop();
     int vyber;
     int cena;
 
