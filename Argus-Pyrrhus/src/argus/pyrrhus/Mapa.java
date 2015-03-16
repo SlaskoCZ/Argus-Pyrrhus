@@ -20,6 +20,7 @@ public class Mapa {
         Lokace lokace = new Lokace();
         Vstup vstup = new Vstup();
         System.out.println("");
+        System.out.println("Rozcesti:");
         System.out.println("1.Nahoru");
         System.out.println("2.Dolu");
         System.out.println("3.Doprava");
