@@ -24,7 +24,25 @@ public class Shop {
     void nakup() {
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
-            case "1":
+            case 1:
+                cena = 25;
+                System.out.println("Opravdu chcete koupit tento item za" + cena + " ?[ano/ne]");
+                vstup.vstup();
+                switch (Vstup.vstup) {
+                    case "ano":
+                        if (money - cena > 0) {
+                            payment = true;
+                            money -= cena;
+                            databazeitemu.HP();
+                            break;
+
+                        }
+
+                    case "ne":
+                        shop.nakup();
+                        break;
+                }
+            case 2:
                 cena = 25;
                 System.out.println("Opravdu chcete koupit tento item za" + cena + " ?[ano/ne]");
                 vstup.vstup();
@@ -42,26 +60,8 @@ public class Shop {
                         shop.nakup();
                         break;
 
-                    case "2":
-                        cena = 25;
-                        System.out.println("Opravdu chcete koupit tento item za" + cena + " ?[ano/ne]");
-                        vstup.vstup();
-                        switch (Vstup.vstup) {
-                            case "ano":
-                                if (money - cena > 0) {
-                                    payment = true;
-                                    money -= cena;
-                                    databazeitemu.HP();
-                                    break;
-
-                                }
-
-                            case "ne":
-                                shop.nakup();
-                                break;
-
-                        }
                 }
         }
     }
 }
+
