@@ -50,4 +50,4 @@ public class Vstup {
         vstup = user_input.next();
 
    
-}
+}}
