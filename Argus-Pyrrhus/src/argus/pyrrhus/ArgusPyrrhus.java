@@ -49,10 +49,7 @@ public class ArgusPyrrhus {
         vstup.name();
         //Obtiznost
         menu.obtiznost();
-        //Pozice
-        Mapa.heroMap[13][13] = "X";
-        Mapa.heroPos[0] = 13;
-        Mapa.heroPos[1] = 13;
+        
         // Vypis do konzole
         utilities.clearConsole();
         menu.hlavniMenu();
