@@ -16,6 +16,7 @@ public class Mapa {
     public static int[] heroPos = new int[2];
 
     void rozcesti() {
+        Utilities utilities = new Utilities();
         Lokace lokace = new Lokace();
         Vstup vstup = new Vstup();
         System.out.println("");
@@ -43,8 +44,12 @@ public class Mapa {
             case 5:
                 mapVision();
                 break;
+            default:
+                rozcesti();
+                break;
 
         }
+        utilities.clearConsole();
         heroMap[heroPos[0]][heroPos[1]] = "X";
     }
 
