@@ -30,23 +30,23 @@ public class Mapa {
         System.out.print("Tvoje volba: ");
         vstup.vstup();
         int x = Integer.valueOf(Vstup.vstup);
-        boolean newPos = false;
+        boolean newPosition = false;
         switch (x) {
             case 1:
                 heroPos[0]--;
-                newPos=true;
+                newPosition=true;
                 break;
             case 2:
                 heroPos[0]++;
-                newPos=true;
+                newPosition=true;
                 break;
             case 3:
                 heroPos[1]++;
-                newPos=true;
+                newPosition=true;
                 break;
             case 4:
                 heroPos[1]--;
-                newPos=true;
+                newPosition=true;
                 break;
             case 5:
                 
@@ -59,11 +59,12 @@ public class Mapa {
                 break;
 
         }
-        if (newPos = true){
+        utilities.clearConsole();
+        if (newPosition == true){
             lokace.getLocation(Mapa.mapa[Mapa.heroPos[0]][Mapa.heroPos[1]][1]);
         }
                 
-        utilities.clearConsole();
+        
         heroMap[heroPos[0]][heroPos[1]] = "X";
     }
 
