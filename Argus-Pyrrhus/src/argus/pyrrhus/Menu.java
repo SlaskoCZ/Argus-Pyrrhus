@@ -68,7 +68,7 @@ public class Menu {
     }
 
     //Rozcesti od 1. Mapa
-    void rozcesti() {
+    void rozcesti() throws IOException {
         System.out.println("");
         System.out.println("Rozcesti:");
         System.out.println("1.Nahoru");
