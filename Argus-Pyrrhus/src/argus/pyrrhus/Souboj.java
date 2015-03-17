@@ -12,15 +12,14 @@ import java.io.IOException;
  * @author Slasko
  */
 public class Souboj {
-        Enemy enemy;
-        Staty staty;
-        ArgusPyrrhus argusPyrrhus;
-        Zobrazeni zobrazeni;
-        Vstup vstup;
-        Utilities utilities;
-        
-        
-        
+
+    Enemy enemy = new Enemy();
+    Staty staty = new Staty();
+    ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
+    Zobrazeni zobrazeni = new Zobrazeni();
+    Vstup vstup = new Vstup();
+    Utilities utilities = new Utilities();
+
 //    void Boj() {
 //        
 //        zobrazeni.Hrdina();
@@ -43,34 +42,30 @@ public class Souboj {
 //            System.out.println("");
 //
 //        }
+    //   }
+    void Boj() throws IOException {
 
-    public Souboj() {
-        this.utilities = new Utilities();
-        this.enemy = new Enemy();
-        this.staty = new Staty();
-        this.argusPyrrhus = new ArgusPyrrhus();
-        this.zobrazeni = new Zobrazeni();
-        this.vstup = new Vstup();
-    }
-
-        
- //   }
-    void Boj() throws IOException{
-       
         if (Enemy.enemyZdravi > 0 && ArgusPyrrhus.zdravi > 0) {
             utok();
             if (Enemy.enemyZdravi > 0) {
-            enemyutok();
-            Boj();
+                enemyutok();
+
+            }
+
+        } else if (ArgusPyrrhus.zdravi < 0) {
+            System.out.println("Bohuzel nejsi dost silny a prohral si s " + Enemy.enemyName + " zbylo mu " + Enemy.enemyZdravi + " bodu zdravi");
         }
-           
-        }else if(ArgusPyrrhus.zdravi < 0){
-         System.out.println("Bohuzel nejsi dost silny a prohral si s " + Enemy.enemyName + " zbylo mu " + Enemy.enemyZdravi + " bodu zdravi");   
-        }
-          
-          
+        System.out.println("");
+        System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
+
+        staty.exp(1);
+        staty.MONEY();
+        System.out.println("Obdrzel jsi " + Staty.gain + " exp a " + Staty.moneygive + " stribrnych");
+        zobrazeni.Hrdina();
+
     }
-    void utok () throws IOException{
+
+    void utok() throws IOException {
         System.out.println("0. Popis utoku ");
         System.out.println("1. Rychli utok ");
         System.out.println("2. Utok ");
@@ -79,14 +74,13 @@ public class Souboj {
         vstup.vstup();
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
-                 System.out.println("Rychli utok - Jde o typ utoku, ktery diky sve rychlosti temer vzdy zasahne cil. Ale postrada nicivou silu.");
-                 System.out.println("Utok - Jde o typ utoku, ktery je ve vsem prumerny");
-                 System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
-                 System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
-                 System.out.println("Pokracovat ...");
-                 
-                 System.in.read();
-                 utok();
+                System.out.println("Rychli utok - Jde o typ utoku, ktery diky sve rychlosti temer vzdy zasahne cil. Ale postrada nicivou silu.");
+                System.out.println("Utok - Jde o typ utoku, ktery je ve vsem prumerny");
+                System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
+                System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
+                System.out.println("Pokracovat ...");
+                System.in.read();
+                utok();
                 break;
             case 1:
                 staty.hitfast();
@@ -104,12 +98,12 @@ public class Souboj {
                 System.out.println("Neplatny utok");
                 utok();
                 break;
-        } 
+        }
     }
-    
-    private void enemyutok(){
-      staty.enemyHit();
-      
+
+    private void enemyutok() {
+        staty.enemyHit();
+
     }
-  
+
 }

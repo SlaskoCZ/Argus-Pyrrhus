@@ -46,7 +46,8 @@ public class Vstup {
     }
 
     void vstup() {
-        Scanner user_input = new Scanner(System.in);
+        Scanner user_input;
+        user_input = new Scanner(System.in);
         vstup = user_input.next();
 
    

@@ -11,13 +11,9 @@ package argus.pyrrhus;
  */
 public class Staty {
 
-    Enemy enemy;
+    Enemy enemy = new Enemy();
     //penizky a jeho vzorecky
     public static int moneygive;
-
-    public Staty() {
-        this.enemy = new Enemy();
-    }
 
     void MONEY() {
         if (ArgusPyrrhus.LVL == Enemy.enemyLVL) {

@@ -15,25 +15,14 @@ import java.io.IOException;
  */
 public class Menu {
 
-    Mapa mapa;
-    Vstup vstup;
-    Utilities utilities;
-    Lokace lokace;
-    Shop shop;
-    Souboj souboj;
-    Enemy enemy;
-    Zobrazeni zobrazeni;
-
-    public Menu() {
-        this.zobrazeni = new Zobrazeni();
-        this.enemy = new Enemy();
-        this.souboj = new Souboj();
-        this.shop = new Shop();
-        this.lokace = new Lokace();
-        this.utilities = new Utilities();
-        this.vstup = new Vstup();
-        this.mapa = new Mapa();
-    }
+    Mapa mapa = new Mapa();
+    Vstup vstup = new Vstup();
+    Utilities utilities = new Utilities();
+    Lokace lokace = new Lokace();
+    Shop shop = new Shop();
+    Souboj souboj = new Souboj();
+    Enemy enemy = new Enemy();
+    Zobrazeni zobrazeni = new Zobrazeni();
 
     //Hlavni menu
     void hlavniMenu() throws IOException {
@@ -64,8 +53,9 @@ public class Menu {
                 break;
             case 3:
                 enemy.getEnemy((int) (Math.round(Math.random() * 4 + 1)));
+                while (Enemy.enemyZdravi>0){
                 souboj.Boj();
-                zobrazeni.Reward(); 
+                }
                 break;
             case 4:
                 zobrazeni.Hrdina();
@@ -79,7 +69,6 @@ public class Menu {
         }
         System.in.read();
         utilities.clearConsole();
-        hlavniMenu();
     }
 
     //Rozcesti od 1. Mapa

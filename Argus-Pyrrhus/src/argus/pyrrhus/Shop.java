@@ -15,14 +15,13 @@ import java.io.IOException;
 public class Shop {
 
     Vstup vstup;
-    Databazeitemu databazeitemu;
+    Databazeitemu databazeitemu = new Databazeitemu();
     int vyber;
     int cena;
 
     public static Boolean payment = false;
 
     public Shop() {
-        this.databazeitemu = new Databazeitemu();
         this.vstup = new Vstup();
     }
     
