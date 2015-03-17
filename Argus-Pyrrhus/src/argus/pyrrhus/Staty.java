@@ -26,7 +26,7 @@ public class Staty {
     }
     public static int lvlup;
 
-    void exp() {
+    void exp(int exp) {
         int expgain = 20;
         Vstup vstup = new Vstup();
         ArgusPyrrhus.EXP = (int) (ArgusPyrrhus.EXP + ArgusPyrrhus.LVL + expgain * ArgusPyrrhus.obtiznost * (1.1 - 0.2 * Math.random()));
