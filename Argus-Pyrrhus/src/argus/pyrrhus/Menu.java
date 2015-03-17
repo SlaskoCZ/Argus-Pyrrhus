@@ -32,7 +32,7 @@ public class Menu {
         System.out.println("3. Rychly Souboj");
         System.out.println("4. Charakter");
         System.out.println("5.Ukoncit");
-        System.out.print("Tvoje volba: ");
+        System.out.print("6. Dungeony ");
         vstup.vstup();
         utilities.clearConsole();
         switch (Integer.valueOf(Vstup.vstup)) {
@@ -50,6 +50,7 @@ public class Menu {
                 break;
             case 2:
                 shop.nakup();
+               // Vstup.shopItemy();
                 break;
             case 3:
                 enemy.getEnemy((int) (Math.round(Math.random() * 4 + 1)));
