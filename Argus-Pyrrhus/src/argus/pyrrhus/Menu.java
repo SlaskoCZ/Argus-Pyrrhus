@@ -38,11 +38,12 @@ public class Menu {
         switch (Integer.valueOf(Vstup.vstup)) {
             case 0:
                 System.out.println("Testovaci rezim");
-                ArgusPyrrhus.STR=100;
-                ArgusPyrrhus.DEX=100;
-                ArgusPyrrhus.INT=100;
-                ArgusPyrrhus.VIT=100;
-                ArgusPyrrhus.money=2000000;
+                ArgusPyrrhus.STR = 100;
+                ArgusPyrrhus.DEX = 100;
+                ArgusPyrrhus.INT = 100;
+                ArgusPyrrhus.VIT = 100;
+                ArgusPyrrhus.money = 2000000;
+                ArgusPyrrhus.zdravi = 5*ArgusPyrrhus.VIT;
                 break;
             case 1:
                 rozcesti();
@@ -116,8 +117,9 @@ public class Menu {
                 break;
 
         }
-        if (newPosition == true)
-            Mapa.heroMap[heroPos[0]][heroPos[1]]="X";
+        if (newPosition == true) {
+            Mapa.heroMap[heroPos[0]][heroPos[1]] = "X";
+        }
     }
 
     void obtiznost() {
