@@ -16,9 +16,17 @@ import static argus.pyrrhus.ArgusPyrrhus.EXP;
 import static argus.pyrrhus.ArgusPyrrhus.name;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.File;
+import java.lang.Throwable;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -57,13 +65,17 @@ public class Vstup {
     }
     private final static Charset ENCODING = StandardCharsets.UTF_8;
 
-    public String[] shopItemy() throws IOException {
-        String path = ("D:\\skola\\Java\\ja\\Argus-Pyrrhus\\Argus-Pyrrhus\\Test_Files\\Test_File.txt");
+    public String[] shopItemy() throws IOException, URISyntaxException {
+        String fileName ="ShopItems.ap";
+        //Path rootPath = Paths.get("\\Argus-Pyrrhus\\Argus-Pyrrhus");
+        String dir = System.getProperty("user.dir");
+        String path = (dir+"\\src\\argus\\pyrrhus\\FileHolder\\"+fileName);
+        System.out.println(path);
+        System.in.read();
         FileReader fileReader = new FileReader(path);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         int numberOfLines = countLines(path);
         String[] polozky = new String[numberOfLines];
-        String line = null;
         int j = 0;
         int nOfIt = 0;
         for (int i = 0; i < numberOfLines; i++) {
@@ -86,9 +98,11 @@ public class Vstup {
     private static int countLines(String path) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         int lines = 0;
-        while (bufferedReader.readLine().contains("\\")!=true){
+        while (bufferedReader.readLine() != null) {
             lines++;
+            System.out.println(lines);
         }
+        bufferedReader.close();
         return lines;
 
     }
