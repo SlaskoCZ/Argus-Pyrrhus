@@ -72,7 +72,7 @@ public class Menu {
     //Rozcesti od 1. Mapa
     void rozcesti() throws IOException {
         System.out.println("");
-        System.out.println("Rozcesti:");
+        System.out.println("Rozcesti(pouzivejte pouze cisla):");
         System.out.println("1.Nahoru");
         System.out.println("2.Dolu");
         System.out.println("3.Doprava");
@@ -111,7 +111,8 @@ public class Menu {
                 shop.nakup();
                 break;
             default:
-                System.exit(1);
+                System.out.println("Nezpravne udaje");
+                hlavniMenu();
                 break;
 
         }
