@@ -49,11 +49,11 @@ public class ArgusPyrrhus {
         vstup.name();
         //Obtiznost
         menu.obtiznost();
-        
+
         // Vypis do konzole
         utilities.clearConsole();
         menu.hlavniMenu();
-        
+
         
 //        while (zdravi > 0) {
 //            enemy.getEnemy();
@@ -63,7 +63,7 @@ public class ArgusPyrrhus {
 //            System.out.println("Dalsi souboj? Zmackni enter");
 //            System.in.read();
 //        }
-
+        
     }
 
 }

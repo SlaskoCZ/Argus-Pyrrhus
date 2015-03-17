@@ -12,12 +12,14 @@ import java.io.IOException;
  * @author Slasko
  */
 public class Souboj {
-        Enemy enemy = new Enemy();
-        Staty staty = new Staty();
-        ArgusPyrrhus argusPyrrhus = new ArgusPyrrhus();
-        Zobrazeni zobrazeni = new Zobrazeni();
-        Vstup vstup = new Vstup();
-
+        Enemy enemy;
+        Staty staty;
+        ArgusPyrrhus argusPyrrhus;
+        Zobrazeni zobrazeni;
+        Vstup vstup;
+        Utilities utilities;
+        
+        
 //    void Boj() {
 //        
 //        zobrazeni.Hrdina();
@@ -40,6 +42,15 @@ public class Souboj {
 //            System.out.println("");
 //
 //        }
+
+    public Souboj() {
+        this.utilities = new Utilities();
+        this.enemy = new Enemy();
+        this.staty = new Staty();
+        this.argusPyrrhus = new ArgusPyrrhus();
+        this.zobrazeni = new Zobrazeni();
+        this.vstup = new Vstup();
+    }
 
         
  //   }
@@ -74,6 +85,7 @@ public class Souboj {
                  System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
                  System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
                  System.out.println("Pokracovat ...");
+                 
                  System.in.read();
                  utok();
                 break;

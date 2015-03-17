@@ -14,12 +14,17 @@ import java.io.IOException;
  */
 public class Shop {
 
-    Vstup vstup = new Vstup();
-    Databazeitemu databazeitemu = new Databazeitemu();
+    Vstup vstup;
+    Databazeitemu databazeitemu;
     int vyber;
     int cena;
 
     public static Boolean payment = false;
+
+    public Shop() {
+        this.databazeitemu = new Databazeitemu();
+        this.vstup = new Vstup();
+    }
     
 
     void nakup() throws IOException {

@@ -15,14 +15,25 @@ import java.io.IOException;
  */
 public class Menu {
 
-    Mapa mapa = new Mapa();
-    Vstup vstup = new Vstup();
-    Utilities utilities = new Utilities();
-    Lokace lokace = new Lokace();
-    Shop shop = new Shop();
-    Souboj souboj = new Souboj();
-    Enemy enemy = new Enemy();
-    Zobrazeni zobrazeni = new Zobrazeni();
+    Mapa mapa;
+    Vstup vstup;
+    Utilities utilities;
+    Lokace lokace;
+    Shop shop;
+    Souboj souboj;
+    Enemy enemy;
+    Zobrazeni zobrazeni;
+
+    public Menu() {
+        this.zobrazeni = new Zobrazeni();
+        this.enemy = new Enemy();
+        this.souboj = new Souboj();
+        this.shop = new Shop();
+        this.lokace = new Lokace();
+        this.utilities = new Utilities();
+        this.vstup = new Vstup();
+        this.mapa = new Mapa();
+    }
 
     //Hlavni menu
     void hlavniMenu() throws IOException {
