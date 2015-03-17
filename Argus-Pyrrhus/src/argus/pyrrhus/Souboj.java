@@ -47,59 +47,63 @@ public class Souboj {
 
         if (Enemy.enemyZdravi > 0 && ArgusPyrrhus.zdravi > 0) {
             utok();
-            if (Enemy.enemyZdravi > 0) {
-                enemyutok();
+        }
+        if (Enemy.enemyZdravi > 0) {
+            enemyutok();
 
-            }
+        } else {
+            System.out.println("");
+            System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
 
-        } else if (ArgusPyrrhus.zdravi < 0) {
+            staty.exp(1);
+            staty.MONEY();
+            System.out.println("Obdrzel jsi " + Staty.gain + " exp a " + Staty.moneygive + " stribrnych");
+            System.in.read();
+            utilities.clearConsole();
+            zobrazeni.Hrdina();
+        }
+
+        if (ArgusPyrrhus.zdravi< 0) {
             System.out.println("Bohuzel nejsi dost silny a prohral si s " + Enemy.enemyName + " zbylo mu " + Enemy.enemyZdravi + " bodu zdravi");
         }
-        System.out.println("");
-        System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
-
-        staty.exp(1);
-        staty.MONEY();
-        System.out.println("Obdrzel jsi " + Staty.gain + " exp a " + Staty.moneygive + " stribrnych");
-        zobrazeni.Hrdina();
-
     }
-
-    void utok() throws IOException {
-        System.out.println("0. Popis utoku ");
-        System.out.println("1. Rychli utok ");
-        System.out.println("2. Utok ");
-        System.out.println("3. Silny utok");
-        System.out.println("4. Fatality");
-        vstup.vstup();
-        switch (Integer.valueOf(Vstup.vstup)) {
-            case 0:
-                System.out.println("Rychli utok - Jde o typ utoku, ktery diky sve rychlosti temer vzdy zasahne cil. Ale postrada nicivou silu.");
-                System.out.println("Utok - Jde o typ utoku, ktery je ve vsem prumerny");
-                System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
-                System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
-                System.out.println("Pokracovat ...");
-                System.in.read();
-                utok();
-                break;
-            case 1:
-                staty.hitfast();
-                break;
-            case 2:
-                staty.hit();
-                break;
-            case 3:
-                staty.hithard();
-                break;
-            case 4:
-                staty.fatality();
-                break;
-            default:
-                System.out.println("Neplatny utok");
-                utok();
-                break;
+        void utok() throws IOException {
+            System.out.println("0. Popis utoku ");
+            System.out.println("1. Rychli utok ");
+            System.out.println("2. Utok ");
+            System.out.println("3. Silny utok");
+            System.out.println("4. Fatality");
+            vstup.vstup();
+            switch (Integer.valueOf(Vstup.vstup)) {
+                case 0:
+                    System.out.println("Rychli utok - Jde o typ utoku, ktery diky sve rychlosti temer vzdy zasahne cil. Ale postrada nicivou silu.");
+                    System.out.println("Utok - Jde o typ utoku, ktery je ve vsem prumerny");
+                    System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
+                    System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
+                    System.out.println("Pokracovat ...");
+                    System.in.read();
+                    utok();
+                    break;
+                case 1:
+                    staty.hitfast();
+                    break;
+                case 2:
+                    staty.hit();
+                    break;
+                case 3:
+                    staty.hithard();
+                    break;
+                case 4:
+                    staty.fatality();
+                    break;
+                default:
+                    System.out.println("Neplatny utok");
+                    utok();
+                    break;
+            }
         }
-    }
+
+    
 
     private void enemyutok() {
         staty.enemyHit();
