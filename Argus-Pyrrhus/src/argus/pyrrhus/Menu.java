@@ -65,6 +65,7 @@ public class Menu {
             case 3:
                 enemy.getEnemy((int) (Math.round(Math.random() * 4 + 1)));
                 souboj.Boj();
+                zobrazeni.Reward(); 
                 break;
             case 4:
                 zobrazeni.Hrdina();

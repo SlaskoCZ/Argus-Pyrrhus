@@ -29,11 +29,12 @@ public class Staty {
 
     }
     public static int lvlup;
-
+    public static int gain;
     void exp(int exp) {
         int expgain = 20;
+         gain=(int)(ArgusPyrrhus.LVL + expgain * ArgusPyrrhus.obtiznost * (1.1 - 0.2 * Math.random()));
         Vstup vstup = new Vstup();
-        ArgusPyrrhus.EXP = (int) (ArgusPyrrhus.EXP + ArgusPyrrhus.LVL + expgain * ArgusPyrrhus.obtiznost * (1.1 - 0.2 * Math.random()));
+        ArgusPyrrhus.EXP = ArgusPyrrhus.EXP + gain;
         lvlup = 100 + ArgusPyrrhus.LVL * expgain;
         if (lvlup < ArgusPyrrhus.EXP) {
             ArgusPyrrhus.LVL = ArgusPyrrhus.LVL + 1;

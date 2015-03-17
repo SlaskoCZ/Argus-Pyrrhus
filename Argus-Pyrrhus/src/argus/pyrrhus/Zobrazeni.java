@@ -12,6 +12,8 @@ package argus.pyrrhus;
  
 public class Zobrazeni {
     Staty staty = new Staty();
+    
+    
     void Hrdina(){
         System.out.println("Jmeno: "+ArgusPyrrhus.name);
         System.out.println("Level: "+ArgusPyrrhus.LVL+" Exp: "+ArgusPyrrhus.EXP+"/"+staty.lvlup);
@@ -26,5 +28,17 @@ public class Zobrazeni {
     }
     void Enemy(){
         System.out.println("Jmeno: "+Enemy.enemyName);
+    }
+    void Reward(){
+        
+            
+        System.out.println("");
+          System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
+         
+           staty.exp(1);
+           staty.MONEY();
+           System.out.println("Obdrzel jsi "+Staty.gain+" exp a "+Staty.moneygive+" stribrnych");
+           Hrdina();
+           
     }
 }

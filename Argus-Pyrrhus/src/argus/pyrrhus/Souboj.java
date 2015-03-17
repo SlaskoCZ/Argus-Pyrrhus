@@ -20,6 +20,7 @@ public class Souboj {
         Utilities utilities;
         
         
+        
 //    void Boj() {
 //        
 //        zobrazeni.Hrdina();
@@ -55,6 +56,7 @@ public class Souboj {
         
  //   }
     void Boj() throws IOException{
+       
         if (Enemy.enemyZdravi > 0 && ArgusPyrrhus.zdravi > 0) {
             utok();
             if (Enemy.enemyZdravi > 0) {
@@ -65,11 +67,8 @@ public class Souboj {
         }else if(ArgusPyrrhus.zdravi < 0){
          System.out.println("Bohuzel nejsi dost silny a prohral si s " + Enemy.enemyName + " zbylo mu " + Enemy.enemyZdravi + " bodu zdravi");   
         }
-           System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
-          if (Enemy.enemyZdravi < 0) {
-           staty.exp(1);
-           staty.MONEY();
-           zobrazeni.Hrdina(); }
+          
+          
     }
     void utok () throws IOException{
         System.out.println("0. Popis utoku ");
@@ -112,5 +111,5 @@ public class Souboj {
       staty.enemyHit();
       
     }
-
+  
 }
