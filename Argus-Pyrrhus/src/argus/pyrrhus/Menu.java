@@ -115,7 +115,8 @@ public class Menu {
                 break;
 
         }
-
+        if (newPosition == true)
+            Mapa.heroMap[heroPos[0]][heroPos[1]]="X";
     }
 
     void obtiznost() {
