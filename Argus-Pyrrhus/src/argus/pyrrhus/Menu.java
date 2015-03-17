@@ -113,7 +113,7 @@ public class Menu {
                 break;
             default:
                 System.out.println("Nezpravne udaje");
-                hlavniMenu();
+                shop.nakup();
                 break;
 
         }
