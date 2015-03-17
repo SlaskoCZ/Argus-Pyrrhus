@@ -16,17 +16,10 @@ import static argus.pyrrhus.ArgusPyrrhus.EXP;
 import static argus.pyrrhus.ArgusPyrrhus.name;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.File;
-import java.lang.Throwable;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -96,13 +89,14 @@ public class Vstup {
     }
 
     private static int countLines(String path) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-        int lines = 0;
-        while (bufferedReader.readLine() != null) {
-            lines++;
-            System.out.println(lines);
+        int lines;
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
+            lines = 0;
+            while (bufferedReader.readLine() != null) {
+                lines++;
+                System.out.println(lines);
+            }
         }
-        bufferedReader.close();
         return lines;
 
     }
