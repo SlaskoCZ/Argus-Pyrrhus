@@ -5,6 +5,8 @@
  */
 package argus.pyrrhus;
 
+import java.io.IOException;
+
 /**
  *
  * @author Slasko
@@ -41,7 +43,7 @@ public class Souboj {
 
         
  //   }
-    void Boj(){
+    void Boj() throws IOException{
         if (Enemy.enemyZdravi > 0 && ArgusPyrrhus.zdravi > 0) {
             utok();
             if (Enemy.enemyZdravi > 0) {
@@ -58,7 +60,7 @@ public class Souboj {
            staty.MONEY();
            zobrazeni.Hrdina(); }
     }
-    void utok (){
+    void utok () throws IOException{
         System.out.println("0. Popis utoku ");
         System.out.println("1. Rychli utok ");
         System.out.println("2. Utok ");
@@ -71,6 +73,8 @@ public class Souboj {
                  System.out.println("Utok - Jde o typ utoku, ktery je ve vsem prumerny");
                  System.out.println("Silny utok - Jde o typ utoku, ktery ma ohrmnou nicivou silu, ale casto mine.");
                  System.out.println("Fatality - Jde o specialni typ utoku zbrane, ktery zavisi na atributu INT a nemuze udelat kriticky zasah");
+                 System.out.println("Pokracovat ...");
+                 System.in.read();
                  utok();
                 break;
             case 1:
