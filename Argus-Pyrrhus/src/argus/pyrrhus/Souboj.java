@@ -92,7 +92,7 @@ public class Souboj {
         } 
     }
     
-    void enemyutok(){
+    private void enemyutok(){
       staty.enemyHit();
       
     }
