@@ -52,7 +52,7 @@ public class Staty {
         }
     }
 
-    void hit() {
+    void hitfast() {
         //critical sance
         float sance = ((float) ArgusPyrrhus.DEX * (0.5f));
         int critical;
@@ -65,6 +65,70 @@ public class Staty {
         }
         //síla utoku
         ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.STR * (1.1 - 0.2 * Math.random()) * critical)+ArgusPyrrhus.itemdmg);
+       System.out.println("Zasahl jsi " + Enemy.enemyName + " za " + ArgusPyrrhus.hit + " bodu zdravi  zbyva mu " + (Enemy.enemyZdravi - ArgusPyrrhus.hit) + " bodu zdravi");
+       Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+    }
+    void hit() {
+        //critical sance
+        float sance = ((float) ArgusPyrrhus.DEX * (0.5f));
+        int critical;
+        int random = (int) (1 + 100 * Math.random());
+        if ((100 - 25) > random) {
+            if ((100 - sance) < random) {
+            critical = 2;
+
+        } else {
+            critical = 1;
+        }
+        ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.STR * (1.4 - 0.2 * Math.random()) * critical)+ArgusPyrrhus.itemdmg);    
+         System.out.println("Zasahl jsi " + Enemy.enemyName + " za " + ArgusPyrrhus.hit + " bodu zdravi  zbyva mu " + (Enemy.enemyZdravi - ArgusPyrrhus.hit) + " bodu zdravi");
+         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+        }else {
+            System.out.println("netrefil jsi");
+        }
+        
+        //síla utoku
+        
+
+    }
+    void hithard() {
+        //critical sance
+        float sance = ((float) ArgusPyrrhus.DEX * (0.5f));
+        int critical;
+        int random = (int) (1 + 100 * Math.random());
+        if ((100 - 50) > random) {
+            if ((100 - sance) < random) {
+            critical = 2;
+
+        } else {
+            critical = 1;
+        }
+        ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.STR * (2.0 - 0.2 * Math.random()) * critical)+ArgusPyrrhus.itemdmg);    
+         System.out.println("Zasahl jsi " + Enemy.enemyName + " za " + ArgusPyrrhus.hit + " bodu zdravi  zbyva mu " + (Enemy.enemyZdravi - ArgusPyrrhus.hit) + " bodu zdravi");
+         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+        }else {
+            System.out.println("netrefil jsi");
+        }
+
+    }
+    void fatality() {
+        //critical sance
+        float sance = ((float) ArgusPyrrhus.DEX * (0.5f));
+        int critical;
+        int random = (int) (1 + 100 * Math.random());
+        if ((100 - 10) > random) {
+            if ((100 - sance) < random) {
+            critical = 2;
+
+        } else {
+            critical = 1;
+        }
+        ArgusPyrrhus.hit = Math.round((float) (Math.random() * ArgusPyrrhus.INT * (1.1 - 0.2 * Math.random()) )+ArgusPyrrhus.itemdmg+ArgusPyrrhus.INT);    
+         System.out.println("Zasahl jsi " + Enemy.enemyName + " za " + ArgusPyrrhus.hit + " bodu zdravi  zbyva mu " + (Enemy.enemyZdravi - ArgusPyrrhus.hit) + " bodu zdravi");
+         Enemy.enemyZdravi = (Enemy.enemyZdravi - ArgusPyrrhus.hit);
+        }else {
+            System.out.println("netrefil jsi");
+        }
 
     }
 
@@ -72,6 +136,7 @@ public class Staty {
         int enemyCritical;
         float enemySance = ((float) Enemy.enemyDEX * (0.5f));
         int enemyRandom = (int) (1 + 100 * Math.random());
+        if ((100 - 10) > enemyRandom) {
         if ((100 - enemySance) < enemyRandom) {
             enemyCritical = 2;
 
@@ -80,5 +145,10 @@ public class Staty {
         }
 
         Enemy.enemyHit = Math.round((float) (Math.random() * Enemy.enemySTR * (1.1 - 0.2 * Math.random()) * enemyCritical));
-    }
+    System.out.println(Enemy.enemyName + " te zasahl za " + Enemy.enemyHit + " bodu zdravi   tve zbyvajici zdravi je " + (ArgusPyrrhus.zdravi - Enemy.enemyHit));
+        ArgusPyrrhus.zdravi = (ArgusPyrrhus.zdravi - Enemy.enemyHit);
+        }else {
+         System.out.println("tvuj protivnik te nezasahl");   
+        }
+}
 }
