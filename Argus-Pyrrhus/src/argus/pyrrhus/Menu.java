@@ -8,6 +8,7 @@ package argus.pyrrhus;
 import static argus.pyrrhus.ArgusPyrrhus.obtiznost;
 import static argus.pyrrhus.Mapa.heroPos;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Menu {
     Zobrazeni zobrazeni = new Zobrazeni();
 
     //Hlavni menu
-    void hlavniMenu() throws IOException {
+    void hlavniMenu() throws IOException, URISyntaxException {
         System.out.println("0. Testovaci Rezim ");
         System.out.println("1. Mapa ");
         System.out.println("2. Shop ");
@@ -49,8 +50,8 @@ public class Menu {
                 rozcesti();
                 break;
             case 2:
-                shop.nakup();
-               // Vstup.shopItemy();
+               // shop.nakup();
+                vstup.shopItemy();
                 break;
             case 3:
                 enemy.getEnemy((int) (Math.round(Math.random() * 4 + 1)));
@@ -73,7 +74,7 @@ public class Menu {
     }
 
     //Rozcesti od 1. Mapa
-    void rozcesti() throws IOException {
+    void rozcesti() throws IOException, URISyntaxException {
         System.out.println("");
         System.out.println("Rozcesti(pouzivejte pouze cisla):");
         System.out.println("1.Nahoru");
