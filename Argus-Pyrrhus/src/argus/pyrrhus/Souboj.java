@@ -54,7 +54,7 @@ public class Souboj {
         }
            System.out.println(Enemy.enemyName + " vubec netusil co se stalo");
           if (Enemy.enemyZdravi < 0) {
-            staty.exp();
+           staty.exp(1);
            staty.MONEY();
            zobrazeni.Hrdina(); }
     }
