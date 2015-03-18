@@ -7,6 +7,7 @@ package argus.pyrrhus;
 
 import static argus.pyrrhus.ArgusPyrrhus.money;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  *
@@ -26,7 +27,7 @@ public class Shop {
     }
     
 
-    void nakup() throws IOException {
+    void nakup() throws IOException, URISyntaxException {
         Menu menu = new Menu();
         System.out.println("Obchod");
         System.out.println("0. Zpet do menu");

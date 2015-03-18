@@ -14,6 +14,7 @@ import static argus.pyrrhus.ArgusPyrrhus.VIT;
 import static argus.pyrrhus.ArgusPyrrhus.LVL;
 import static argus.pyrrhus.ArgusPyrrhus.EXP;
 import static argus.pyrrhus.ArgusPyrrhus.name;
+import static argus.pyrrhus.Vstup.shopItems;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,6 +28,8 @@ import java.util.Scanner;
  * @author Slasko
  */
 public class Vstup {
+
+    public static String[][][][][][][][] shopItems;
 
     public static String vstup;
 
@@ -58,11 +61,11 @@ public class Vstup {
     }
     private final static Charset ENCODING = StandardCharsets.UTF_8;
 
-    public String[] shopItemy() throws IOException, URISyntaxException {
-        String fileName ="ShopItems.ap";
+    public void shopItemy() throws IOException, URISyntaxException {
+        String fileName = "ShopItems.ap";
         //Path rootPath = Paths.get("\\Argus-Pyrrhus\\Argus-Pyrrhus");
         String dir = System.getProperty("user.dir");
-        String path = (dir+"\\src\\argus\\pyrrhus\\FileHolder\\"+fileName);
+        String path = (dir + "\\src\\argus\\pyrrhus\\FileHolder\\" + fileName);
         System.out.println(path);
         System.in.read();
         FileReader fileReader = new FileReader(path);
@@ -78,14 +81,25 @@ public class Vstup {
                 j--;
             } else {
                 nOfIt++;
+
             }
             j++;
 
         }
-        for (int i = 0; i < nOfIt; i++) {
-            System.out.println(polozky[i]);
+        nOfIt++;
+        shopItems = new String[nOfIt][nOfIt][nOfIt][nOfIt][nOfIt][nOfIt][nOfIt][nOfIt];
+        for (int i = 1;i < nOfIt;i++) {
+            String[] prace = polozky[i-1].split(";");
+            shopItems[i][0][0][0][0][0][0][0] = prace[0];
+            shopItems[0][i][0][0][0][0][0][0] = prace[1];
+            shopItems[0][0][i][0][0][0][0][0] = prace[2];
+            shopItems[0][0][0][i][0][0][0][0] = prace[3];
+            shopItems[0][0][0][0][i][0][0][0] = prace[4];
+            shopItems[0][0][0][0][0][i][0][0] = prace[5];
+            shopItems[0][0][0][0][0][0][i][0] = prace[6];
+            shopItems[0][0][0][0][0][0][0][i] = prace[7];
+                    
         }
-        return null;
     }
 
     private static int countLines(String path) throws IOException {
@@ -95,6 +109,7 @@ public class Vstup {
             while (bufferedReader.readLine() != null) {
                 lines++;
                 System.out.println(lines);
+                
             }
         }
         return lines;
