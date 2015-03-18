@@ -6,6 +6,7 @@
 package argus.pyrrhus;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  * @author Ssaruman
@@ -33,8 +34,9 @@ public class ArgusPyrrhus {
      * @param args the command line arguments
      * @throws java.io.IOException
      * @throws java.lang.InterruptedException
+     * @throws java.net.URISyntaxException
      */
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
         Vstup vstup = new Vstup();
         Utilities utilities = new Utilities();
         Menu menu = new Menu();
@@ -55,16 +57,6 @@ public class ArgusPyrrhus {
         while (true){
         menu.hlavniMenu();
         }
-        
-        
-//        while (zdravi > 0) {
-//            enemy.getEnemy();
-//            souboj.Boj();
-//            zobrazeni.Hrdina();
-//
-//            System.out.println("Dalsi souboj? Zmackni enter");
-//            System.in.read();
-//        }
 
     }
 
